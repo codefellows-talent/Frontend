@@ -27,7 +27,31 @@ nav{
 
 //Landing hero
 .landing-hero{
-  height: 10%;
+  width: 100vw;
+  height: 42vh;
+  filter: brightness(.4);
+  position: relative;
+}
+
+#grad-hiring{
+  color: white;
+  font-family: $font-title;
+  position: absolute;
+  text-align: center;
+  top: 180px;
+  left: 0;
+  width: 100%;
+}
+#grad-hiring-info{
+  color: white;
+  font-family: $font-title;
+  position: absolute;
+  text-align: center;
+  top: 250px;
+  left: 0;
+  width: 75%;
+  margin-left: 14%;
+
 }
 //-------------------------------------------
 p {
