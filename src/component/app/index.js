@@ -4,6 +4,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 import Header from '../header';
 import LandingContainer from '../landing-container';
+import Footer from '../footer';
 
 class App extends React.Component {
   render () {
@@ -13,6 +14,7 @@ class App extends React.Component {
           <div>
             <Header />
             <Route exact path='/' component={LandingContainer}/>
+            <Footer />
           </div>
         </BrowserRouter>
       </div>
