@@ -1,11 +1,11 @@
 import React from 'react';
 import TalentItem from '../talent-item';
 
-class ContactForm extends React.Component {
+class ConnectForm extends React.Component {
   render () {
     return (
       <div>
-        <form className='contact-form' onSubmit='' >
+        <form className='connect-form' onSubmit='' >
           <input
             name='name'
             type='text'
@@ -41,4 +41,4 @@ class ContactForm extends React.Component {
   }
 }
 
-export default ContactForm;
+export default ConnectForm;
