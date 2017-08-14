@@ -1,13 +1,62 @@
 @import "./_vars.scss";
 
 body {
-  background: $color-secondary;
+  background: $color-black;
   position: relative;
   display: block;
 }
+//nav----------------------
+nav img {
+  padding: 2%;
+  max-width: 30%;
+}
+a{
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  font-family: $font-title;
+}
+nav li a {
+  line-height: 20px;
+}
+nav{
+  display: block;
+}
 
+//------------------------------------------
+
+//Landing hero
+.landing-hero{
+  width: 100vw;
+  height: 42vh;
+  filter: brightness(.4);
+  position: relative;
+}
+
+#grad-hiring{
+  color: white;
+  font-family: $font-title;
+  position: absolute;
+  text-align: center;
+  top: 180px;
+  left: 0;
+  width: 100%;
+}
+#grad-hiring-info{
+  color: white;
+  font-family: $font-title;
+  position: absolute;
+  text-align: center;
+  top: 250px;
+  left: 0;
+  width: 75%;
+  margin-left: 14%;
+
+}
+//-------------------------------------------
 p {
   display: block;
+  color: white;
 }
 pre {
   white-space: pre;
@@ -29,19 +78,7 @@ strong {
   font-weight: 700;
 }
 
-a {
-  color: $color-black;
-  text-decoration: underline;
-}
 
-a:visited {
-  color: $color-black;
-  text-decoration: underline;
-}
-a:hover {
-  color: $color-black;
-  text-decoration: underline;
-}
 
 
 button {
@@ -116,23 +153,4 @@ button, input[type="submit"] {
   &:active {
     background: $color-darkgray;
   }
-}
-
-ul, ol, li {
-  margin-left: $pad *2;
-}
-li {
-  display: list-item;
-}
-ul li {
-  list-style: disc;
-}
-ol li {
-  list-style: decimal;
-}
-ol ol li, ul ol li {
-  list-style: lower-alpha;
-}
-ol ul li, ul ul li {
-  list-style: square;
 }

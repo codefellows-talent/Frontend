@@ -7,6 +7,8 @@ class LandingContainer extends React.Component{
     return(
       <div>
         <img className='landing-hero' src='https://s3.amazonaws.com/401-hire-cf/pexels-photo.jpg'/>
+        <h1 id="grad-hiring">Graduate Hiring</h1>
+        <h6 id="grad-hiring-info">Anonymously find the perfect candidate for you.</h6>
         <div className='graduate-image-container'>
           <div className='graduate-image'></div>
           <div className='graduate-image'></div>
