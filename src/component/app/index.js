@@ -5,6 +5,8 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Header from '../header';
 import LandingContainer from '../landing-container';
 import Footer from '../footer';
+import ListTalents from '../list-talents';
+import ContactForm from '../contact-form';
 
 class App extends React.Component {
   render () {
@@ -14,6 +16,8 @@ class App extends React.Component {
           <div>
             <Header />
             <Route exact path='/' component={LandingContainer}/>
+            <Route exact path='/talents' component={ListTalents} />
+            <Route exact path ='/contact' component={ContactForm} />
             <Footer />
           </div>
         </BrowserRouter>
