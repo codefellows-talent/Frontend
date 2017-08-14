@@ -1,3 +1,6 @@
+
+
+//COLOR VARIABLES
 $color-primary: #4E648E;
 $color-secondary: #7788AA;
 $color-primary-background: white;
@@ -9,12 +12,26 @@ $color-lightgray: #B5BAC3;
 $color-gray: #52555B;
 $color-darkgray: #6E7177;
 $Buttons: #b62f20; //codefellows red
-$font-headers: Gotham Rounded SSm A,Gotham Rounded SSm B;
-$font-p: Helvatica;
-$font-test: Gotham;
+
+
+//FONT VARIABLES
+@font-face {
+  font-family: gotham-rounded;
+  src: url('./src/style/assets/font/Gotham-Rounded.ttf');
+}
+$font-title: gotham-rounded;
+
+//FONT SIZE VARIABLES
+$h1: 4em;
+$h2: 1.2em;
+$p: 1em;
+
+
+
+
 
 #test {
-  font-family: $font-headers;
+  font-family: $font-title;
 }
 
 //H1 size 4em
