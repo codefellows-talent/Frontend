@@ -1,12 +1,20 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {MemoryRouter, Switch, Route} from 'react-router-dom';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+
+import Header from '../header';
+import LandingContainer from '../landing-container';
 
 class App extends React.Component {
   render () {
     return (
       <div className='app'>
-        <p>potato</p>
+        <BrowserRouter>
+          <div>
+            <Header />
+            <Route exact path='/' component={LandingContainer}/>
+          </div>
+        </BrowserRouter>
       </div>
     );
   }
