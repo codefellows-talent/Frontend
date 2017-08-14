@@ -9,7 +9,6 @@ import storeCreate from './lib/store-create';
 
 let AppContainer = () => (
   <Provider store={storeCreate()}>
-    <p>app</p>
     <App />
   </Provider>
 );
