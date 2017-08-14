@@ -6,7 +6,7 @@ import Header from '../header';
 import LandingContainer from '../landing-container';
 import Footer from '../footer';
 import ListTalents from '../list-talents';
-import ContactForm from '../contact-form';
+import ConnectForm from '../connect-form';
 
 class App extends React.Component {
   render () {
@@ -17,7 +17,7 @@ class App extends React.Component {
             <Header />
             <Route exact path='/' component={LandingContainer}/>
             <Route exact path='/talents' component={ListTalents} />
-            <Route exact path ='/contact' component={ContactForm} />
+            <Route exact path ='/connect' component={ConnectForm} />
             <Footer />
           </div>
         </BrowserRouter>
