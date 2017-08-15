@@ -1,0 +1,14 @@
+@import "./_vars.scss";
+
+body{
+  background: blue;
+}
+div.talent-item{
+  margin-top: 50%;
+}
+
+@media only screen and (max-width: 500px) {
+  .list-talents{
+    margin-top: 50%;
+  }
+}

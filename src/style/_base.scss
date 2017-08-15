@@ -6,8 +6,8 @@ body {
   display: block;
 }
 //nav----------------------
-nav img {
-  margin-top: 2%;
+header img {
+  margin-top: 1%;
   margin-left: 15%;
   max-width: 16%;
   display: inline;
@@ -28,7 +28,7 @@ nav ul{
   float: left;
   position: absolute;
   margin-left: -5%;
-  margin-top: 3.3%;
+  margin-top: 2.0%;
 }
 nav{
   position: fixed;
@@ -39,11 +39,11 @@ nav{
 }
 
 @media only screen and (max-width: 300px) {
-  nav img {
-    margin-top: 3%;
+  header img {
+    margin-top: 2%;
     margin-left: 15%;
     display: inline;
-    width: 20vw;
+    width: 50%;
     height: auto;
   }
   a{
@@ -67,7 +67,7 @@ nav{
   }
   nav{
     position: fixed;
-    z-index: 100;
+    z-index: 999;
     background: $color-black;
     height: 9%;
     display: inline;

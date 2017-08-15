@@ -1,3 +1,4 @@
+import '../../style/_talent-item.scss';
 import React from 'react';
 import TalentItem from '../talent-item';
 

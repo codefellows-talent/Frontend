@@ -5,7 +5,7 @@ class TalentItem extends React.Component {
     return (
       <div className='talent-item'>
         <h4>Nickname</h4>
-        <p>Tagline Tagline Taglin Taglinee<p>icons go here</p></p>
+        <p>Tagline Tagline Taglin Taglinee<span>icons go here</span></p>
         <p>Employment Tagline Previously</p>
         <p>Additional Education</p>
         <p>Current Title if in Field</p>
