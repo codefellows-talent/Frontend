@@ -1,15 +1,63 @@
 @import "./_vars.scss";
 
+*{
+  font-family: arial;
+}
 body{
-  background: grey;
+  background: white;
 }
 div.list-talents{
   display: inline-block;
-  margin-top: 30%;
+  margin-top: 12vh;
+  color: black;
+  width: 80%;
+  margin-left: 10%;
+  border: 1px solid lightgrey;
+  padding: 10px;
+}
+p{
+  color: black;
+}
+button{
+  color: white;
+  position: absolute;
+  left: 70vw;
+  width: 20%;
+  text-align: center;
+  background-color: $Buttons;
+  padding: $pad;
+  border-radius: 30px;
+  padding: 5px;
+
+}
+
+.add-button{
+  display: inline;
+  margin-top: -4%;
+  margin-left: -2%;
+}
+.connect-button{
+  margin-left: -2%;
 }
 
 @media only screen and (max-width: 500px) {
   .list-talents{
-    margin-top: 50%;
+    margin-top: 20%;
+  }
+  p{
+    font-size: .8em;
+  }
+  button{
+    color: white;
+    position: absolute;
+    left: 70vw;
+    width: 20%;
+    text-align: center;
+    background-color: $Buttons;
+    padding: $pad;
+    border-radius: 30px;
+    padding: 5px;
+    font-size: .5em;
+
   }
 }

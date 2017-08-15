@@ -1,4 +1,4 @@
-import '../../style/_connect-form.scss'
+import '../../style/_connect-form.scss';
 import React from 'react';
 import TalentItem from '../talent-item';
 
@@ -59,9 +59,11 @@ class ConnectForm extends React.Component {
             value={this.state.terms}
             onChange={this.state.handleChange}
           />Terms of Use
-          <button type='submit'>Connect Me!</button>
+          <button className="connect-button-submit" type='submit'>Connect Me!</button>
         </form>
-        <TalentItem />
+        <div className="list-talents">
+          <TalentItem />
+        </div>
       </div>
     );
   }

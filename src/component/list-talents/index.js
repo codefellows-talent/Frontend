@@ -8,7 +8,7 @@ class ListTalents extends React.Component {
       <div className="list-talents">
         <div>
           <p>Profiles Selected: #</p>
-          <button onSubmit={() => {}}>Connect Me!</button>
+          <button className="connect-button" onSubmit={() => {}}>Connect Me!</button>
         </div>
         <TalentItem />
       </div>

@@ -1,3 +1,4 @@
+import '../../style/_talent-item.scss';
 import React from 'react';
 
 class TalentItem extends React.Component {
@@ -12,7 +13,7 @@ class TalentItem extends React.Component {
         <p>Skills and Tools</p>
         <p>Seeking: Fulltime, Parttime, Apprentice</p>
         <p>Not willing to relocate</p>
-        <button onClick={() => {}}>Add</button>
+        <button className="add-button" onClick={() => {}}>Add</button>
       </div>
     );
   }

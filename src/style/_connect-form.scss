@@ -1,15 +1,28 @@
 @import "./_vars.scss";
 
 body{
-  background: grey;
+  background: white;
 }
 .connect-form{
   display: inline-block;
-  margin-top: 30%;
+  margin-top: 15%;
+}
+form{
+  display: inline-block;
+  margin-top: 12vh;
+  color: black;
+  width: 80%;
+  margin-left: 10%;
+  border: 1px solid lightgrey;
+  padding: 10px;
+}
+.connect-button-submit{
+  margin-left: -2%;
+  margin-top: -2%;
 }
 
 @media only screen and (max-width: 500px) {
   .list-talents{
-    margin-top: 50%;
+    margin-top: 15%;
   }
 }
