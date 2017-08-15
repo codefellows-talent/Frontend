@@ -1,59 +1,58 @@
 @import "./_vars.scss";
 
 body {
-  background: $color-black;
+  background: white;
   position: relative;
   display: block;
 }
 //nav----------------------
 nav img {
-  padding: 2%;
-  max-width: 30%;
+  margin-top: 2%;
+  margin-left: 15%;
+  max-width: 16%;
+  display: inline;
 }
 a{
   text-decoration: none;
   list-style-type: none;
   color: white;
   font-family: $font-title;
+
 }
-nav li a {
+nav li {
   line-height: 20px;
+  display: inline;
+  margin-left: 15%;
+}
+nav ul{
+  float: left;
+  position: absolute;
+  margin-left: -5%;
+  margin-top: 3.3%;
 }
 nav{
-  display: block;
+  position: fixed;
+  z-index: 100;
+  background: $color-black;
+  height: 15%;
+  display: inline;
 }
 
 //------------------------------------------
 
-//Landing hero
-.landing-hero{
-  width: 100vw;
-  height: 42vh;
-  filter: brightness(.4);
-  position: relative;
+
+
+//FOOTER CSS------------------------
+footer{
+  background-color: black;
 }
 
-#grad-hiring{
-  color: white;
-  font-family: $font-title;
-  position: absolute;
-  text-align: center;
-  top: 180px;
-  left: 0;
-  width: 100%;
-}
-#grad-hiring-info{
-  color: white;
-  font-family: $font-title;
-  position: absolute;
-  text-align: center;
-  top: 250px;
-  left: 0;
-  width: 75%;
-  margin-left: 14%;
 
-}
-//-------------------------------------------
+//----------------------------------
+
+
+
+
 p {
   display: block;
   color: white;

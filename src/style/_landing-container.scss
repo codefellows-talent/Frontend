@@ -1,0 +1,107 @@
+@import "./_vars.scss";
+
+//Landing hero 1
+.landing-hero{
+  margin-top: -17%;
+  width: 100vw;
+  height: 42vh;
+  filter: brightness(.4);
+  position: relative;
+}
+
+#grad-hiring{
+  color: white;
+  font-family: $font-title;
+  position: absolute;
+  text-align: center;
+  top: 25vh;
+  left: 0;
+  width: 100%;
+}
+#grad-hiring-info{
+  color: white;
+  font-family: $font-title;
+  position: absolute;
+  text-align: center;
+  top: 32vh;
+  left: 0;
+  width: 100%;
+}
+//-------------------------------------------
+
+//Landing hero 2
+.landing-hero{
+  margin-top: 7%;
+  width: 100vw;
+  height: 40vh;
+  filter: brightness(.4);
+  position: relative;
+}
+
+#grad-explination{
+  color: white;
+  font-family: $font-title;
+  position: absolute;
+  text-align: center;
+  top: 99vh;
+  left: 0;
+  width: 100%;
+}
+#grad-explination-text{
+  color: white;
+  font-family: $font-title;
+  position: absolute;
+  text-align: center;
+  top: 105vh;
+  left: 0;
+  width: 75%;
+  margin-left: 14%;
+}
+.landing-talent-button {
+  color: white;
+  position: absolute;
+  left: 45vw;
+  width: 10%;
+  top: 118vh;
+  text-align: center;
+  background-color: $Buttons;
+  padding: $pad;
+  border-radius: 30px;
+}
+//-------------------------------------------
+
+
+//LANDING STATEMENT
+.landing-statement{
+  background: white;
+  display: block;
+  font-family: Helvetica;
+}
+
+
+
+
+//-------------------------------
+
+//LANDING STUDENT IMGS
+
+.grad-pics {
+  display: inline-block;
+  width: 10vw;
+  height: 20vh;
+  border-radius: 100%;
+  vertical-align: middle;
+  margin-top: 3%;
+  margin-bottom: 0%;
+  text-color: black;
+  position: relative;
+  margin-left: 7vw;
+  margin-right: 7vw;
+  color: black;
+  box-shadow: 100px;
+  -webkit-box-shadow: 1px 1px 2.5px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 1px 1px 2.5px 0px rgba(0, 0, 0, 1);
+  box-shadow: 1px 1px 2.5px 0px rgba(0, 0, 0, 1);
+}
+
+//----------------------------------
