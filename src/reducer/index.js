@@ -1,5 +1,7 @@
 import {combineReducers} from 'redux';
 // we'll drop this /route.js. It's just dummy data to get everything to laod
-import route from './route.js';
+import connectReducer from './connect.js';
 
-export default combineReducers({route});
+export default combineReducers({
+  connect: connectReducer,
+});
