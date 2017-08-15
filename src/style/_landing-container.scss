@@ -135,7 +135,7 @@
       top: 16vh;
       left: 0;
       width: 100%;
-      z-index: 100;
+      z-index: 99;
       text-align: center;
     }
     #grad-hiring-info{
@@ -147,7 +147,7 @@
       top: 20vh;
       left: 0;
       width: 100%;
-      z-index: 100;
+      z-index: 99;
     }
     //-------------------------------------------
     //Landing hero 2
@@ -185,7 +185,6 @@
       left: 0;
       width: 80%;
       z-index: 100;
-      overflow: scroll;
 
     }
     .landing-talent-button {
