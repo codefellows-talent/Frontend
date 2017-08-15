@@ -1,15 +1,42 @@
 @import "./_vars.scss";
 
 body{
-  background: grey;
+  background: white;
 }
 .connect-form{
   display: inline-block;
-  margin-top: 30%;
+  margin-top: 15%;
+  padding-bottom: 1%;
+}
+form{
+  display: inline-block;
+  margin-top: 12vh;
+  color: black;
+  width: 80%;
+  margin-left: 10%;
+  border: 1px solid lightgrey;
+  padding: 10px;
+}
+.connect-button-submit{
+  margin-left: -2%;
+  margin-top: 6%;
+}
+#checkbox{
+  width: 5%;
+  float: left;
+}
+#checkbox-text{
+  color: black;
+  float: left;
+  width: 25%;
 }
 
 @media only screen and (max-width: 500px) {
   .list-talents{
-    margin-top: 50%;
+    margin-top: 15%;
+  }
+  .connect-form{
+    display: inline-block;
+    margin-top: 22%;
   }
 }

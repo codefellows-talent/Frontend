@@ -78,9 +78,13 @@ nav{
 
 
 //FOOTER CSS------------------------
-footer{
-  background-color: black;
+.footer p{
+  color: grey;
+  font-family: $font-title;
+  font-size: 0.1em;
+  text-align: center;
 }
+
 
 
 //----------------------------------

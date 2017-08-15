@@ -1,5 +1,7 @@
 @import "./_vars.scss";
 
+
+
 //Landing hero 1
 .landing-hero{
   margin-top: 17vh;
@@ -54,7 +56,7 @@
   font-family: $font-title;
   position: absolute;
   text-align: left;
-  font-size: 0.6em;
+  font-size: calc(1em * 1.1);
   top: 105vh;
   left: 0;
   width: 80%;
@@ -65,7 +67,7 @@
   position: absolute;
   left: 45vw;
   width: 10%;
-  top: 110vh;
+  top: 116vh;
   text-align: center;
   background-color: $Buttons;
   padding: $pad;
@@ -93,6 +95,14 @@
   width: 100%;
   height: 100%;
 }
+
+// .grad-text{
+//   font-size: .2em;
+//   color: grey;
+//   text-align: center;
+//   font-style: italic;
+//   width: 20%;
+// }
 
 .item{
 
@@ -168,10 +178,10 @@
       font-family: $font-title;
       font-size: 1.2em;
       position: absolute;
-      text-align: left;
+      text-align: center;
       top: 52vh;
       left: 0;
-      width: 80%;
+      width: 100%;
       z-index: 100;
       text-align: center;
     }
@@ -190,10 +200,11 @@
     .landing-talent-button {
       color: white;
       position: absolute;
-      left: 45vw;
       width: 10%;
-      top: 118vh;
+      left: 45;
+      top: 70vh;
       text-align: center;
+      font-size: .08em;
       background-color: $Buttons;
       padding: $pad;
       border-radius: 30px;

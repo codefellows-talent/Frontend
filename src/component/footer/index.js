@@ -5,7 +5,9 @@ class Footer extends React.Component {
   render() {
     return (
       <footer className='footer'>
-        <h1>Footer</h1>
+        <p>Contact Us</p>
+        <p>Code Fellows</p>
+        <p>© 2017 Code Fellows, Inc. Code Fellows is a licensed Technical Education provider by the state of Washington.</p>
       </footer>
     );
   }
