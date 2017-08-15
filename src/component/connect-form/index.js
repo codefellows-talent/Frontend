@@ -48,17 +48,19 @@ class ConnectForm extends React.Component {
           <input
             name='company'
             type='text'
-            maxlength='255'
+            maxLength='255'
             value={this.state.company}
             onChange={this.state.handleChange}
             placeholder='Company'
           />
-          <input
-            name='terms-of-use'
-            type='checkbox'
-            value={this.state.terms}
-            onChange={this.state.handleChange}
-          />Terms of Use
+          <div>
+            <input id="checkbox"
+              name='terms-of-use'
+              type='checkbox'
+              value={this.state.terms}
+              onChange={this.state.handleChange}
+            /> <p id="checkbox-text">Terms of Use</p>
+          </div>
           <button className="connect-button-submit" type='submit'>Connect Me!</button>
         </form>
         <div className="list-talents">

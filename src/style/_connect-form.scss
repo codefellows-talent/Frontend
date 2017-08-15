@@ -6,6 +6,7 @@ body{
 .connect-form{
   display: inline-block;
   margin-top: 15%;
+  padding-bottom: 1%;
 }
 form{
   display: inline-block;
@@ -18,11 +19,24 @@ form{
 }
 .connect-button-submit{
   margin-left: -2%;
-  margin-top: -2%;
+  margin-top: 6%;
+}
+#checkbox{
+  width: 5%;
+  float: left;
+}
+#checkbox-text{
+  color: black;
+  float: left;
+  width: 25%;
 }
 
 @media only screen and (max-width: 500px) {
   .list-talents{
     margin-top: 15%;
+  }
+  .connect-form{
+    display: inline-block;
+    margin-top: 22%;
   }
 }
