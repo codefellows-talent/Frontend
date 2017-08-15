@@ -1,5 +1,5 @@
 let validatePayload = (payload) => {
-  if (!payload.id || !payload.timestamp || !payload.name || !payload.email || !payload.company || !payload.terms)
+  if (!payload.id || !payload.timestamp || !payload.name || !payload.email || !payload.company || payload.terms === 'unchecked')
     throw new Error('VALIDATION ERROR: Connection must have an id, timestamp, name, email, company and accept terms');
 };
 

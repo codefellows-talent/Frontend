@@ -1,4 +1,4 @@
-import '../../style/_connect-form.scss'
+import '../../style/_connect-form.scss';
 import React from 'react';
 import TalentItem from '../talent-item';
 

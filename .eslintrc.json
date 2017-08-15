@@ -5,6 +5,7 @@
     "comma-dangle": ["error", "always-multiline"],
     "no-console": "off",
     "no-unused-vars": "off",
+    "no-undef": "off",
     "indent": [ "error", 2 ],
     "semi": ["error", "always"]
   },
