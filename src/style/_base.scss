@@ -34,10 +34,45 @@ nav{
   position: fixed;
   z-index: 100;
   background: $color-black;
-  height: 15%;
+  height: 10%;
   display: inline;
 }
 
+@media only screen and (max-width: 300px) {
+  nav img {
+    margin-top: 3%;
+    margin-left: 15%;
+    display: inline;
+    width: 20vw;
+    height: auto;
+  }
+  a{
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    font-family: $font-title;
+
+  }
+  nav li {
+    line-height: 15px;
+    display: inline;
+    margin-left: 15%;
+    font-size: 0.8em;
+  }
+  nav ul{
+    float: left;
+    position: absolute;
+    margin-left: -5%;
+    margin-top: 3.3%;
+  }
+  nav{
+    position: fixed;
+    z-index: 100;
+    background: $color-black;
+    height: 9%;
+    display: inline;
+  }
+}
 //------------------------------------------
 
 
