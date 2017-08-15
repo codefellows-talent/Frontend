@@ -20,13 +20,16 @@ nav li a {
   line-height: 20px;
 }
 nav{
-  display: block;
+  position: fixed;
+  z-index: 100;
+  background: $color-black;
 }
 
 //------------------------------------------
 
 //Landing hero
 .landing-hero{
+  margin-top: 10%;
   width: 100vw;
   height: 42vh;
   filter: brightness(.4);
@@ -54,6 +57,18 @@ nav{
 
 }
 //-------------------------------------------
+
+//LANDING STATEMENT
+.landing-statement{
+  background: white;
+  display: block;
+  font-family: Helvetica;
+}
+
+
+
+
+//-------------------------------
 p {
   display: block;
   color: white;
