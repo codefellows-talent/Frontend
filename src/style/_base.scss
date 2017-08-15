@@ -1,35 +1,48 @@
 @import "./_vars.scss";
 
 body {
-  background: $color-black;
+  background: white;
   position: relative;
   display: block;
 }
 //nav----------------------
 nav img {
-  padding: 2%;
-  max-width: 30%;
+  margin-top: 2%;
+  margin-left: 15%;
+  max-width: 16%;
+  display: inline;
 }
 a{
   text-decoration: none;
   list-style-type: none;
   color: white;
   font-family: $font-title;
+
 }
-nav li a {
+nav li {
   line-height: 20px;
+  display: inline;
+  margin-left: 15%;
+}
+nav ul{
+  float: left;
+  position: absolute;
+  margin-left: -5%;
+  margin-top: 3.3%;
 }
 nav{
   position: fixed;
   z-index: 100;
   background: $color-black;
+  height: 15%;
+  display: inline;
 }
 
 //------------------------------------------
 
-//Landing hero
+//Landing hero 1
 .landing-hero{
-  margin-top: 10%;
+  margin-top: -17%;
   width: 100vw;
   height: 42vh;
   filter: brightness(.4);
@@ -41,7 +54,7 @@ nav{
   font-family: $font-title;
   position: absolute;
   text-align: center;
-  top: 180px;
+  top: 25vh;
   left: 0;
   width: 100%;
 }
@@ -50,13 +63,53 @@ nav{
   font-family: $font-title;
   position: absolute;
   text-align: center;
-  top: 250px;
+  top: 32vh;
+  left: 0;
+  width: 100%;
+}
+//-------------------------------------------
+
+//Landing hero 2
+.landing-hero{
+  margin-top: 7%;
+  width: 100vw;
+  height: 40vh;
+  filter: brightness(.4);
+  position: relative;
+}
+
+#grad-explination{
+  color: white;
+  font-family: $font-title;
+  position: absolute;
+  text-align: center;
+  top: 99vh;
+  left: 0;
+  width: 100%;
+}
+#grad-explination-text{
+  color: white;
+  font-family: $font-title;
+  position: absolute;
+  text-align: center;
+  top: 105vh;
   left: 0;
   width: 75%;
   margin-left: 14%;
-
+}
+.landing-talent-button {
+  color: white;
+  position: absolute;
+  left: 45vw;
+  width: 10%;
+  top: 118vh;
+  text-align: center;
+  background-color: $Buttons;
+  padding: $pad;
+  border-radius: 30px;
 }
 //-------------------------------------------
+
 
 //LANDING STATEMENT
 .landing-statement{
@@ -69,6 +122,35 @@ nav{
 
 
 //-------------------------------
+
+//LANDING STUDENT IMGS
+
+.grad-pics {
+  display: inline-block;
+  width: 10vw;
+  height: 20vh;
+  border-radius: 100%;
+  vertical-align: middle;
+  margin-top: 3%;
+  margin-bottom: 0%;
+  text-color: black;
+  position: relative;
+  margin-left: 7vw;
+  margin-right: 7vw;
+  color: black;
+}
+
+
+
+
+
+//----------------------------------
+
+
+
+
+
+
 p {
   display: block;
   color: white;

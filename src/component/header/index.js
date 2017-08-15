@@ -7,12 +7,14 @@ class Header extends React.Component{
       <div className='header'>
         <header>
           <nav>
-            <img  src='https://s3.amazonaws.com/401-hire-cf/cf-logo-horizontal-2-color-white.png'/>
-            <ul>
-              <li><Link to='/'>Home</Link> </li>
-              <li><Link to='/talents'>Talent</Link> </li>
-              <li><Link to='/connect'>Connect</Link> </li>
-            </ul>
+            <container>
+              <img  id="logo" src='https://s3.amazonaws.com/401-hire-cf/cf-logo-horizontal-2-color-white.png'/>
+              <ul>
+                <li><Link to='/'>Home</Link> </li>
+                <li><Link to='/talents'>Talent</Link> </li>
+                <li><Link to='/connect'>Connect</Link> </li>
+              </ul>
+            </container>
           </nav>
         </header>
       </div>
