@@ -12,7 +12,6 @@ div.list-talents{
   color: black;
   width: 80%;
   margin-left: 10%;
-  border: 1px solid lightgrey;
   padding: 10px;
 }
 p{
@@ -33,12 +32,12 @@ button{
 
 .add-button{
   display: inline;
-  margin-top: -4%;
   margin-left: -2%;
 }
 .connect-button{
   margin-left: -2%;
 }
+
 
 @media only screen and (max-width: 500px) {
   .list-talents{
@@ -58,6 +57,6 @@ button{
     border-radius: 30px;
     padding: 5px;
     font-size: .5em;
-
+    margin-top: 2%;
   }
 }
