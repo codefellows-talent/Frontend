@@ -1,8 +1,18 @@
 import '../../style/_list-talents.scss';
 import React from 'react';
 import TalentItem from '../talent-item';
+import {connect} from 'react-redux';
+import * as profileActions from '../../action/profile-actions.js';
 
 class ListTalents extends React.Component {
+  constructor(props){
+    super(props);
+  }
+
+  componentWillMount(){
+    this.props.fetchProfile();
+  }
+
   render () {
     return (
       <div className="list-talents">
@@ -10,10 +20,25 @@ class ListTalents extends React.Component {
           <p>Profiles Selected: #</p>
           <button className="connect-button" onSubmit={() => {}}>Connect Me!</button>
         </div>
-        <TalentItem />
+        
+        {this.props.profiles.map(studentProfile => {
+          return <TalentItem key={studentProfile['salesforceId']} profile={studentProfile}/>;
+        })}
       </div>
     );
   }
 }
 
-export default ListTalents;
+// export default ListTalents;
+
+
+let mapStateToProps = (state) => ({
+  profiles: state.profiles,
+});
+
+let mapDispatchToProps = (dispatch) => ({
+  fetchProfile: () => dispatch(profileActions.profilesFetchRequest()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ListTalents);
+
