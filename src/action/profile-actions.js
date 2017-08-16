@@ -22,6 +22,7 @@ export const profileUpdate = (profile) =>{
 export const profilesFetchRequest = () => (dispatch) => {
   return superagent.get(`${__API_URL__}/api/v1/profiles`)
     .then((res) => {
+      console.log(res);
       dispatch(profileSet(res.body));
       return res;
     });
