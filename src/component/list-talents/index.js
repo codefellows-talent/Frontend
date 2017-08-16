@@ -22,7 +22,7 @@ class ListTalents extends React.Component {
         </div>
         
         {this.props.profiles.map(studentProfile => {
-          return <TalentItem key={studentProfile['salesforceId']} profile={studentProfile}/>;
+          return <TalentItem key={studentProfile.salesforceId} onUpdate={this.props.profileUpdate} profile={studentProfile}/>;
         })}
       </div>
     );
@@ -37,6 +37,7 @@ let mapStateToProps = (state) => ({
 });
 
 let mapDispatchToProps = (dispatch) => ({
+  profileUpdate: (profile) => dispatch(profileActions.profileUpdate(profile)),
   fetchProfile: () => dispatch(profileActions.profilesFetchRequest()),
 });
 
