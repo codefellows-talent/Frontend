@@ -1,20 +1,20 @@
 import '../../style/_connect-form.scss';
 import React from 'react';
 import superagent from 'superagent';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 import TalentItem from '../talent-item';
 
 class ConnectForm extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     let selected = [];
-    props.profiles.forEach(profile => profile.selected ? selected.push(profile.salesforceId): null);
+    props.profiles.forEach(profile => profile.selected ? selected.push(profile.salesforceId) : null);
 
     this.state = {
-      name:'',
-      email:'',
-      company:'',
+      name: '',
+      email: '',
+      company: '',
       ids: selected,
       terms: false,
     };
@@ -24,17 +24,16 @@ class ConnectForm extends React.Component {
   }
 
   handleChange(event) {
-    if(event.target.name === 'terms'){
+    if (event.target.name === 'terms') {
       this.setState({ terms: !this.state.terms });
     }
     else
-      this.setState({[event.target.name]: event.target.value});
+      this.setState({ [event.target.name]: event.target.value });
 
   }
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(this.state);
     superagent.post(`${__API_URL__}/api/v1/connect`)
       .send({
         email: this.state.email,
@@ -43,15 +42,15 @@ class ConnectForm extends React.Component {
         terms: this.state.terms,
         company: this.state.company,
       })
-      .then(res =>{
+      .then(res => {
         console.log(res);
       })
-      .catch(err =>{
+      .catch(err => {
         console.error(err);
       });
   }
 
-  render () {
+  render() {
     return (
       <div>
         <form className='connect-form' onSubmit={this.handleSubmit} >
@@ -59,6 +58,7 @@ class ConnectForm extends React.Component {
             name='name'
             type='text'
             maxlength='255'
+            required
             value={this.state.name}
             onChange={this.handleChange}
             placeholder='Name'
@@ -66,7 +66,7 @@ class ConnectForm extends React.Component {
           <input
             name='email'
             type='email'
-            maxlength='255'
+            required
             value={this.state.email}
             onChange={this.handleChange}
             placeholder='Email'
@@ -74,6 +74,7 @@ class ConnectForm extends React.Component {
           <input
             name='company'
             type='text'
+            required
             maxLength='255'
             value={this.state.company}
             onChange={this.handleChange}
@@ -91,8 +92,8 @@ class ConnectForm extends React.Component {
         </form>
 
         {
-          this.props.profiles.map(profile =>{
-            if(profile.selected)
+          this.props.profiles.map(profile => {
+            if (profile.selected)
               return <TalentItem key={profile.salesforceId} profile={profile} />;
             else
               return;
@@ -108,7 +109,7 @@ let mapStateToProps = (state) => ({
 });
 
 let mapDispatchToProps = (dispatch) => ({
-  
+
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ConnectForm);
