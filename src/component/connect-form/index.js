@@ -1,22 +1,21 @@
 import '../../style/_connect-form.scss';
 import React from 'react';
 import superagent from 'superagent';
+import {connect} from 'react-redux';
 
-import ListTalents from '../list-talents';
 import TalentItem from '../talent-item';
 
 class ConnectForm extends React.Component {
   constructor (props) {
     super(props);
-    
-    let selected = props.profile ? props.profiles.filter(profile => {
-      return profile.selected;  
-    }) : [];
+    let selected = [];
+    props.profiles.forEach(profile => profile.selected ? selected.push(profile.salesforceId): null);
+
     this.state = {
       name:'',
       email:'',
       company:'',
-      ids: selected.length ? selected : [],
+      ids: selected,
       terms: false,
     };
 
@@ -39,7 +38,7 @@ class ConnectForm extends React.Component {
     superagent.post(`${__API_URL__}/api/v1/connect`)
       .send({
         email: this.state.email,
-        ids: ['0036100000oImUS'],
+        ids: this.state.ids,
         name: this.state.name,
         terms: this.state.terms,
         company: this.state.company,
@@ -90,10 +89,26 @@ class ConnectForm extends React.Component {
           </div>
           <button className="connect-button-submit" type='submit'>Connect Me!</button>
         </form>
-        <ListTalents/>
+
+        {
+          this.props.profiles.map(profile =>{
+            if(profile.selected)
+              return <TalentItem key={profile.salesforceId} profile={profile} />;
+            else
+              return;
+          })
+        }
       </div>
     );
   }
 }
 
-export default ConnectForm;
+let mapStateToProps = (state) => ({
+  profiles: state.profiles,
+});
+
+let mapDispatchToProps = (dispatch) => ({
+  
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ConnectForm);
