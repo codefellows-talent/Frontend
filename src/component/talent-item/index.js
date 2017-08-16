@@ -15,6 +15,7 @@ class TalentItem extends React.Component {
         <p>{profile.employer}</p>
         <p>{profile.coursework}</p>
         <p>{profile.careerTagline}</p>
+        <br></br>
         <button className="add-button" onClick={this.props.updateSelected}>Add</button>
       </div>
     );
