@@ -17,17 +17,31 @@ class LandingContainer extends React.Component{
           <div className='graduate-image'></div>
           <div className='graduate-image'></div>
         </div>
-        <div className="item">
-          <img className='grad-pics' src='https://s3.amazonaws.com/codefellows-hiring-partners/saul.jpg'/>
-        </div>
-        <div className="item">
-          <img className='grad-pics' src='https://s3.amazonaws.com/codefellows-hiring-partners/felix.png'/>
-        </div>
-        <div className="item">
-          <img className='grad-pics' src='https://s3.amazonaws.com/codefellows-hiring-partners/nicu.png'/>
-        </div>
-        <div className="item">
-          <img className='grad-pics' src='https://s3.amazonaws.com/codefellows-hiring-partners/michael.jpeg'/>
+        <div id="pictures-box">
+          <div className="item">
+            <img className='grad-pics' src='https://s3.amazonaws.com/codefellows-hiring-partners/saul.jpg'/>
+            <p>If you understand everything your learning, start paying more attention</p>
+            <h5>Saul Greene</h5>
+            <h6>Full Stack Javascript Engineer</h6>
+          </div>
+          <div className="item">
+            <img className='grad-pics' src='https://s3.amazonaws.com/codefellows-hiring-partners/felix.png'/>
+            <p>If you understand everything your learning, start paying more attention</p>
+            <h5>Saul Greene</h5>
+            <h6>Full Stack Javascript Engineer</h6>
+          </div>
+          <div className="item">
+            <img className='grad-pics' src='https://s3.amazonaws.com/codefellows-hiring-partners/nicu.png'/>
+            <p>If you understand everything your learning, start paying more attention</p>
+            <h5>Saul Greene</h5>
+            <h6>Full Stack Javascript Engineer</h6>
+          </div>
+          <div className="item">
+            <img className='grad-pics' src='https://s3.amazonaws.com/codefellows-hiring-partners/michael.jpeg'/>
+            <p>If you understand everything your learning, start paying more attention</p>
+            <h5>Saul Greene</h5>
+            <h6>Full Stack Javascript Engineer</h6>
+          </div>
         </div>
         <div>
           <img className='landing-hero2' src='https://s3.amazonaws.com/codefellows-hiring-partners/Screen+Shot+2017-08-14+at+11.27.09+PM.png'/>
