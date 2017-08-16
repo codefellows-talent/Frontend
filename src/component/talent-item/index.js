@@ -6,6 +6,10 @@ class TalentItem extends React.Component {
     super(props);
   }
 
+  handleUpdateSelected(profile){
+    this.props.handleUpdateSelected(profile);
+  }
+
   render () {
     let {profile} = this.props;
     return (
@@ -18,7 +22,7 @@ class TalentItem extends React.Component {
         <p>Skills and Tools</p>
         <p>Seeking: Fulltime, Parttime, Apprentice</p>
         <p>Not willing to relocate</p>
-        <button className="add-button" onClick={() => {}}>Add</button>
+        <button className="add-button" onClick={handleUpdateSelected(profile)}>Add</button>
       </div>
     );
   }
