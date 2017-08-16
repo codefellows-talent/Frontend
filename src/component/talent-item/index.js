@@ -10,13 +10,10 @@ class TalentItem extends React.Component {
     this.handleUpdateSelected = this.handleUpdateSelected.bind(this);
   }
 
-<<<<<<< HEAD
-=======
   handleUpdateSelected (profile) {
     profile.selected = !profile.selected;
     this.props.profileUpdate(profile);
   }
->>>>>>> 5572a07b70aa1f195b2e94f187db618cd6c13820
 
   render () {
     let {profile} = this.props;
@@ -27,16 +24,9 @@ class TalentItem extends React.Component {
         <p>{profile.employer}</p>
         <p>{profile.coursework}</p>
         <p>{profile.careerTagline}</p>
-<<<<<<< HEAD
-        <p>Skills and Tools</p>
-        <p>Seeking: Fulltime, Parttime, Apprentice</p>
-        <p>Not willing to relocate</p>
-        <button className="add-button" onClick={()=>{}}>Add</button>
-=======
         <button className="add-button" onClick={() => this.handleUpdateSelected(profile)}>
           {profile.selected ? 'Remove' : 'Add'}
         </button>
->>>>>>> 5572a07b70aa1f195b2e94f187db618cd6c13820
       </div>
     );
   }
