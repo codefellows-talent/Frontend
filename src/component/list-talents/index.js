@@ -22,7 +22,7 @@ class ListTalents extends React.Component {
         </div>
         
         {this.props.profiles.map(studentProfile => {
-          return <TalentItem key={studentProfile['salesforceId']} profile={studentProfile}/>
+          return <TalentItem key={studentProfile['salesforceId']} profile={studentProfile}/>;
         })}
       </div>
     );
