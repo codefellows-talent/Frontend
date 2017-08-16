@@ -13,7 +13,7 @@ class ListTalents extends React.Component {
   }
 
   handleUpdateSelected (profile){
-    console.log('car')
+    console.log('car');
   }
 
   handleCountSelected (profiles) {
