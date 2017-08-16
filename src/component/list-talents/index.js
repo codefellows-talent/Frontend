@@ -2,18 +2,14 @@ import '../../style/_list-talents.scss';
 import React from 'react';
 import TalentItem from '../talent-item';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 import * as profileActions from '../../action/profile-actions.js';
 
 class ListTalents extends React.Component {
   constructor (props) {
     super(props);
 
-    this.handleUpdateSelected = this.handleUpdateSelected.bind(this);
     this.handleCountSelected = this.handleCountSelected.bind(this);
-  }
-
-  handleUpdateSelected (profile){
-    console.log('car');
   }
 
   handleCountSelected (profiles) {
@@ -34,11 +30,11 @@ class ListTalents extends React.Component {
       <div className="list-talents">
         <div>
           <p>Profiles Selected: {this.handleCountSelected(this.props.profiles)}</p>
-          <button className="connect-button" onSubmit={() => {}}>Connect Me!</button>
+          <Link to='/connect' className=''>Connect Me!</Link>
         </div>
 
         {this.props.profiles.map(studentProfile => {
-          return <TalentItem key={studentProfile.salesforceId} updateSelected={this.handleUpdateSelected} profile={studentProfile}/>;
+          return <TalentItem key={studentProfile.salesforceId} profile={studentProfile}/>;
         })}
       </div>
     );
