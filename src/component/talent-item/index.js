@@ -52,7 +52,7 @@ class TalentItem extends React.Component {
       'Vim': 'https://s3.amazonaws.com/codefellows-hiring-partners/vim.jpg',
       'Emacs': 'https://s3.amazonaws.com/codefellows-hiring-partners/Emacs-icon.png',
       'Bash':'https://s3.amazonaws.com/codefellows-hiring-partners/bash.png',
-      'Redux': 'https://s3.amazonaws.com/codefellows-hiring-partners/redux.png'
+      'Redux': 'https://s3.amazonaws.com/codefellows-hiring-partners/redux.png',
     };
 
     // let imageURL = require(`${__dirname}/../../style/assets/icons/${imageAssign[profile.skills.top]}`);
@@ -60,6 +60,7 @@ class TalentItem extends React.Component {
     return (
       <div className='talent-item'>
         <h5>{profile.nickname}</h5>
+        <img src={imageAssign[profile.skills.top]}></img>
         <p>
           {profile.tools.top}
         </p>
