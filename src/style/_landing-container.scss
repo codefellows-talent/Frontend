@@ -4,9 +4,9 @@
 
 //Landing hero 1
 .landing-hero{
-  margin-top: 17vh;
+  margin-top: 10vh;
   width: 100vw;
-  height: 42vh;
+  height: 48vh;
   filter: brightness(.25);
   position: relative;
 }
@@ -21,7 +21,7 @@
   width: 100%;
 }
 #grad-hiring-info{
-  color: white;
+  color: $color-white;
   font-family: $font-title;
   position: absolute;
   text-align: center;
@@ -43,7 +43,7 @@
   width: 100%;
 }
 #grad-explination{
-  color: white;
+  color: $color-white;
   font-family: $font-title;
   position: absolute;
   text-align: center;
@@ -53,7 +53,7 @@
 }
 #test{}
 #grad-explination-text{
-  color: white;
+  color: $color-white;
   font-family: $font-title;
   position: absolute;
   text-align: left;
@@ -64,7 +64,7 @@
   margin-left: 10%;
 }
 .landing-talent-button {
-  color: white;
+  color: $color-white;
   position: absolute;
   left: 45vw;
   width: 10%;
@@ -79,7 +79,7 @@
 
 //LANDING STATEMENT
 .landing-statement{
-  background: white;
+  background: $color-white;
   display: block;
   font-family: Helvetica;
 }
@@ -110,13 +110,13 @@
   display: inline-block;
   max-width: 20%;
   vertical-align: middle;
-  text-color: black;
+  text-color: $color-black;
   position: relative;
   margin-left: 2.5vw;
   margin-right: 2.5vw;
   margin-top: 3vh;
   margin-bottom: 2vh;
-  color: black;
+  color: $color-black;
 }
 
 .item p {
@@ -148,13 +148,13 @@
 
     //Landing hero 1
     .landing-hero{
-      margin-top: 21%;
+      margin-top: 10vh;
       width: 100vw;
       height: 20vh;
       filter: brightness(.4);
       position: relative;
     }
-
+    
     #grad-hiring{
       color: $Buttons;
       font-family: $font-title;
@@ -168,7 +168,7 @@
       text-align: center;
     }
     #grad-hiring-info{
-      color: white;
+      color: $color-white;
       font-family: $font-title;
       font-size: 0.8em;
       position: absolute;
@@ -190,7 +190,7 @@
 
 
     #grad-explination{
-      color: white;
+      color: $color-white;
       font-family: $font-title;
       font-size: 1.2em;
       position: absolute;
@@ -202,7 +202,7 @@
       text-align: center;
     }
     #grad-explination-text{
-      color: white;
+      color: $color-white;
       font-family: $font-title;
       font-size: 0.4em;
       position: absolute;
@@ -214,7 +214,7 @@
 
     }
     .landing-talent-button {
-      color: white;
+      color: $color-white;
       position: absolute;
       width: 10%;
       left: 45;
@@ -235,13 +235,13 @@
       display: inline-block;
       max-width: 20%;
       vertical-align: middle;
-      text-color: black;
+      text-color: $color-black;
       position: relative;
       margin-left: 2.5vw;
       margin-right: 2.5vw;
       margin-top: 3vh;
       margin-bottom: 2vh;
-      color: black;
+      color: $color-black;
     }
 
     .item p {

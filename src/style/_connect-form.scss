@@ -1,17 +1,32 @@
 @import "./_vars.scss";
 
 body{
-  background: white;
+  background: $color-white;
+}
+#connect{
+  position: absolute;
+  margin-top: 14%;
+  z-index: 90;
+  color: $color-white;
+  font-family: $font-title;
+  text-align: center;
 }
 .connect-form{
   display: inline-block;
-  margin-top: 15%;
+  margin-top: 3%;
   padding-bottom: 1%;
+}
+.landing-hero-3{
+  margin-top: 10vh;
+  width: 100vw;
+  height: 48vh;
+  filter: brightness(.25);
+  position: relative;
 }
 form{
   display: inline-block;
   margin-top: 12vh;
-  color: black;
+  color: $color-black;
   width: 80%;
   margin-left: 10%;
   border: 1px solid lightgrey;
@@ -26,9 +41,13 @@ form{
   float: left;
 }
 #checkbox-text{
-  color: black;
+  color: $color-black;
   float: left;
   width: 25%;
+}
+.connect-container h4, .connect-container span, .connect-container p{
+  width: 80%;
+  margin-left: 10%;
 }
 
 @media only screen and (max-width: 500px) {
@@ -37,6 +56,21 @@ form{
   }
   .connect-form{
     display: inline-block;
-    margin-top: 22%;
+    margin-top: 5%;
+  }
+  .landing-hero-3{
+    margin-top: 10vh;
+    width: 100vw;
+    height: 30vh;
+    filter: brightness(.25);
+    position: relative;
+  }
+  #connect{
+    position: absolute;
+    margin-top: 35%;
+    z-index: 90;
+    color: $color-white;
+    font-family: $font-title;
+    text-align: center;
   }
 }

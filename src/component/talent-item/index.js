@@ -55,7 +55,6 @@ class TalentItem extends React.Component {
 
     return (
       <div className='talent-item'>
-      hello
         <h5>{profile.nickname}</h5>
         <p>
           <img src={imageAssign[profile.skills.top]} />
