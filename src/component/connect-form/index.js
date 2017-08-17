@@ -2,6 +2,7 @@ import '../../style/_connect-form.scss';
 import React from 'react';
 import superagent from 'superagent';
 import { connect } from 'react-redux';
+import Modal from 'react-modal';
 
 import * as util from '../../lib/util.js';
 import * as profileActions from '../../action/profile-actions.js';
@@ -12,17 +13,30 @@ class ConnectForm extends React.Component {
     super(props);
     let selected = [];
     props.profiles.forEach(profile => profile.selected ? selected.push(profile.salesforceId) : null);
-    
+
     this.state = {
       name: '',
       email: '',
       company: '',
       ids: selected,
       terms: false,
+      modalIsOpen: false,
+      successfullyConnected: false,
+      connectAttempt: 0,
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+  }
+
+  openModal() {
+    this.setState({ modalIsOpen: true });
+  }
+
+  closeModal() {
+    this.setState({ modalIsOpen: false });
   }
 
   handleChange(event) {
@@ -45,16 +59,20 @@ class ConnectForm extends React.Component {
         company: this.state.company,
       })
       .then(res => {
-        localStorage.setItem('contacted',JSON.stringify(this.state));
-       
-        this.props.profiles.forEach(profile =>{
-          if(this.state.ids.includes(profile.salesforceId)){
+        this.setState({successfullyConnected: true});
+        this.setState({ connectAttempt: this.state.connectAttempt++ });
+        localStorage.setItem('contacted', JSON.stringify(this.state));
+        this.props.profiles.forEach(profile => {
+          if (this.state.ids.includes(profile.salesforceId)) {
             profile.contacted = true;
             this.props.profileUpdate(profile);
           }
         });
       })
       .catch(err => {
+        this.setState({ successfullyConnected: false });
+        this.setState({ connectAttempt: this.state.connectAttempt++ });
+
         console.error(err);
       });
   }
@@ -63,7 +81,17 @@ class ConnectForm extends React.Component {
     return (
       <div className="connect-container">
         <h1 id='connect'>Connect</h1>
-        <img className='landing-hero-3' src='https://s3.amazonaws.com/codefellows-hiring-partners/freddy-castro-133328.jpg'/>
+        <img className='landing-hero-3' src='https://s3.amazonaws.com/codefellows-hiring-partners/freddy-castro-133328.jpg' />
+        {
+          (() => {
+            if(!this.state.successfullyConnected && !this.state.connectAttempt)
+              return <h3 className="contact-form-header">Contact Form:</h3>;
+            else if (this.state.successfullyConnected)
+              return <h3 className="contact-form-header">You have successfully connected to {this.state.ids.length} Graduates!</h3>;
+            else if(!this.state.successfullyConnected && this.state.connectAttempt > 0)
+              return <h3 className="contact-form-header">Failed to connect. Please try again later</h3>;
+          })()
+        }
         <form className='connect-form' onSubmit={this.handleSubmit} >
           <input
             name='name'
@@ -98,11 +126,23 @@ class ConnectForm extends React.Component {
               required
               value={this.state.terms}
               onChange={this.handleChange}
-            /> <p id="checkbox-text">Terms of Use</p>
+            /> <p id="checkbox-text" onClick={this.openModal}>Terms of Use</p>
           </div>
           <button className="connect-button-submit" type='submit'>Connect Me!</button>
         </form>
-
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          contentLabel='terms-and-conditions'
+        >
+          <h4 className='modal-header'>Terms and Conditions:</h4>
+          <div className='modal-content'>
+            Bacon ipsum dolor amet strip steak brisket flank, turducken kielbasa biltong boudin. Meatloaf biltong cupim ribeye hamburger landjaeger short ribs. Bacon frankfurter corned beef capicola ball tip jerky cow strip steak pork belly. Fatback corned beef meatloaf chicken. Prosciutto frankfurter short loin, meatball fatback jowl leberkas flank ham hock pork belly swine tail salami. Swine bresaola chicken sausage pancetta jerky salami hamburger shoulder corned beef bacon ball tip drumstick andouille. Rump pork loin pastrami brisket. Bacon ipsum dolor amet strip steak brisket flank, turducken kielbasa biltong boudin. Meatloaf biltong cupim ribeye hamburger landjaeger short ribs. Bacon frankfurter corned beef capicola ball tip jerky cow strip steak pork belly. Fatback corned beef meatloaf chicken. Prosciutto frankfurter short loin, meatball fatback jowl leberkas flank ham hock pork belly swine tail salami. Swine bresaola chicken sausage pancetta jerky salami hamburger shoulder corned beef bacon ball tip drumstick andouille. Rump pork loin pastrami brisket. Bacon ipsum dolor amet strip steak brisket flank, turducken kielbasa biltong boudin. Meatloaf biltong cupim ribeye hamburger landjaeger short ribs. Bacon frankfurter corned beef capicola ball tip jerky cow strip steak pork belly. Fatback corned beef meatloaf chicken. Prosciutto frankfurter short loin, meatball fatback jowl leberkas flank ham hock pork belly swine tail salami. Swine bresaola chicken sausage pancetta jerky salami hamburger shoulder corned beef bacon ball tip drumstick andouille. Rump pork loin pastrami brisket. Bacon ipsum dolor amet strip steak brisket flank, turducken kielbasa biltong boudin. Meatloaf biltong cupim ribeye hamburger landjaeger short ribs. Bacon frankfurter corned beef capicola ball tip jerky cow strip steak pork belly. Fatback corned beef meatloaf chicken. Prosciutto frankfurter short loin, meatball fatback jowl leberkas flank ham hock pork belly swine tail salami. Swine bresaola chicken sausage pancetta jerky salami hamburger shoulder corned beef bacon ball tip drumstick andouille. Rump pork loin pastrami brisket.
+          </div>
+          <button onClick={this.closeModal}>CLOSE</button>
+        </Modal>
+        <h4>Selected Profiles to be contacted:</h4>
         {
           this.props.profiles.map(profile => {
             if (profile.selected)
