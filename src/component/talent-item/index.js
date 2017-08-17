@@ -26,44 +26,51 @@ class TalentItem extends React.Component {
     let freelance = profile.employmentTypes.freelance ? 'Freelance ' : false;
     let notLooking = (!fulltime && !parttime && !apprenticeship && !internship && !freelance)? 'false' : 'Not currently looking at ';
 
+    // handle skills and tools
     let imageAssign = {
-      'JavaScript': 'https://s3.amazonaws.com/codefellows-hiring-partners/javascript.png',
-      'Python': 'https://s3.amazonaws.com/codefellows-hiring-partners/python.png',
-      'IOS-Swift': 'https://s3.amazonaws.com/codefellows-hiring-partners/swift-logo.png',
-      'iOS-Objective C': 'https://s3.amazonaws.com/codefellows-hiring-partners/objective-c.png',
-      'C# .NET': 'https://s3.amazonaws.com/codefellows-hiring-partners/c%23.jpg',
-      'Android - Java': 'https://s3.amazonaws.com/codefellows-hiring-partners/android.png',
-      'Java': 'https://s3.amazonaws.com/codefellows-hiring-partners/java.png',
-      'Angular': 'https://s3.amazonaws.com/codefellows-hiring-partners/angular.png',
-      'React': 'https://s3.amazonaws.com/codefellows-hiring-partners/react.png',
-      'React Native': 'https://s3.amazonaws.com/codefellows-hiring-partners/react-native.png',
-      'HTML and CSS': 'https://s3.amazonaws.com/codefellows-hiring-partners/html5-css3_icon.jpg',
-      'SQL': 'https://s3.amazonaws.com/codefellows-hiring-partners/sql.png',
-      'C or C++': 'https://s3.amazonaws.com/codefellows-hiring-partners/c%2B%2B.png',
-      'Git': 'https://s3.amazonaws.com/codefellows-hiring-partners/git.png',
-      'GitHub': 'https://s3.amazonaws.com/codefellows-hiring-partners/github.png',
-      'Mongo': 'https://s3.amazonaws.com/codefellows-hiring-partners/mongodb.png',
-      'Node.JS': 'https://s3.amazonaws.com/codefellows-hiring-partners/nodejs.png',
-      'Travis Cl': 'https://s3.amazonaws.com/codefellows-hiring-partners/travis.png',
-      'AWS': 'https://s3.amazonaws.com/codefellows-hiring-partners/aws.png',
-      'Azure': 'https://s3.amazonaws.com/codefellows-hiring-partners/azure.png',
-      'Google Cloud Services': 'https://s3.amazonaws.com/codefellows-hiring-partners/google-cloud.png',
-      'Atom': 'https://s3.amazonaws.com/codefellows-hiring-partners/atom.png',
-      'Vim': 'https://s3.amazonaws.com/codefellows-hiring-partners/vim.jpg',
-      'Emacs': 'https://s3.amazonaws.com/codefellows-hiring-partners/Emacs-icon.png',
-      'Bash':'https://s3.amazonaws.com/codefellows-hiring-partners/bash.png',
-      'Redux': 'https://s3.amazonaws.com/codefellows-hiring-partners/redux.png',
+      'JavaScript': `${__AWS_S3_BUCKET__}/javascript.png`,
+      'Python': `${__AWS_S3_BUCKET__}/python.png`,
+      'IOS-Swift': `${__AWS_S3_BUCKET__}/swift-logo.png`,
+      'iOS-Objective C': `${__AWS_S3_BUCKET__}/objective-c.png`,
+      'C# .NET': `${__AWS_S3_BUCKET__}/c%23.jpg`,
+      'Android - Java': `${__AWS_S3_BUCKET__}/android.png`,
+      'Java': `${__AWS_S3_BUCKET__}/java.png`,
+      'Front-end Web Development': '',
+      'Backend Development': '',
+      'Unit Testing': '',
+      'Building automation': '',
+      'Angular': `${__AWS_S3_BUCKET__}/angular.png`,
+      'React': `${__AWS_S3_BUCKET__}/react.png`,
+      'React Native': `${__AWS_S3_BUCKET__}/react-native.png`,
+      'HTML and CSS': `${__AWS_S3_BUCKET__}/html5-css3_icon.jpg`,
+      'SQL': `${__AWS_S3_BUCKET__}/sql.png`,
+      'Relational Database Design': '',
+      'Dev-Ops': '',
+      'C or C++': `${__AWS_S3_BUCKET__}/c%2B%2B.png`,
+      'Shell Scripting (e.g. BASH)': `${__AWS_S3_BUCKET__}/bash.png`,
+      'Git': `${__AWS_S3_BUCKET__}/git.png`,
+      'GitHub': `${__AWS_S3_BUCKET__}/github.png`,
+      'Mongo': `${__AWS_S3_BUCKET__}/mongodb.png`,
+      'Node.JS': `${__AWS_S3_BUCKET__}/nodejs.png`,
+      'Travis Cl': `${__AWS_S3_BUCKET__}/travis.png`,
+      'AWS': `${__AWS_S3_BUCKET__}/aws.png`,
+      'Azure': `${__AWS_S3_BUCKET__}/azure.png`,
+      'Google Cloud Services': `${__AWS_S3_BUCKET__}/google-cloud.png`,
+      'Atom': `${__AWS_S3_BUCKET__}/atom.png`,
+      'Vim': `${__AWS_S3_BUCKET__}/vim.jpg`,
+      'Emacs': `${__AWS_S3_BUCKET__}/Emacs-icon.png`,
     };
 
-    // let imageURL = require(`${__dirname}/../../style/assets/icons/${imageAssign[profile.skills.top]}`);
-    // console.log('imageURL', imageURL);
+    let imageOrText = (key) => imageAssign[key] ? <img src={imageAssign[key]}/> : <span>{imageAssign[key]}</span>;
+
+    let mapImageOrText = (objectKey) => objectKey.map((item, i) => imageAssign[item] ? <img key={i} src={imageAssign[item]}/> : <span key={i}>{item}</span>);
+
     return (
       <div className='talent-item'>
         <h5>{profile.nickname}</h5>
         <img className="talent-icon" src={imageAssign[profile.skills.top]}></img>
-        <p>
-          {profile.tools.top}
-        </p>
+        {imageOrText(profile.skills.top)}
+        {imageOrText(profile.tools.top)}
         <p>{profile.tagline}</p>
         <p>{profile.employer}</p>
         <p>{profile.coursework}</p>
@@ -72,12 +79,11 @@ class TalentItem extends React.Component {
         <p>{profile.graduationDate}</p>
         <p>{profile.codefellowsCourse}</p>
         <p>{relocation}</p>
-
-        <p>Good Skills: {profile.skills.good.map((item) => `${item}  `)}</p>
-        <p>Skills to Learn: {profile.skills.learn.map((item) => `${item}  `)}</p>
+        <p>Good Skills: {mapImageOrText(profile.skills.good)}</p>
+        <p>Skills to Learn: {mapImageOrText(profile.skills.learn)}</p>
         <p>Looking for: {fulltime}{parttime}{apprenticeship}{internship}{freelance}opportunities! </p>
-        <p>{profile.tools.good.map((item) => `${item}  `)}</p>
-        <p>{profile.tools.learn.map((item) => `${item}  `)}</p>
+        <p>{mapImageOrText(profile.tools.good)}</p>
+        <p>{mapImageOrText(profile.tools.learn)}</p>
         <p>{profile.roles.top}</p>
         <p>{profile.roles.other.map((item) => `${item}  `)}</p>
 
