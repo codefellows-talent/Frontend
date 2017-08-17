@@ -1,3 +1,5 @@
+'use strict';
+
 import '../../style/_list-talents.scss';
 import React from 'react';
 import TalentItem from '../talent-item';
@@ -50,6 +52,7 @@ class ListTalents extends React.Component {
     );
   }
 }
+
 
 let mapStateToProps = (state) => ({
   profiles: state.profiles,

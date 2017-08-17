@@ -26,7 +26,7 @@ class LandingContainer extends React.Component{
           </div>
           <div className="item">
             <img className='grad-pics' src='https://s3.amazonaws.com/codefellows-hiring-partners/felix.png'/>
-            <p>Full Stack Javascript Developer, with a passion for making a difference</p>
+            <p>Full Stack Javascript Developer, with a focus in backend development</p>
             <h5>Ryan Felix</h5>
             <h6>Current Code Fellows Student</h6>
           </div>

@@ -40,4 +40,5 @@ let mapDispatchToProps = (dispatch) => ({
   profileUpdate: (profile) => dispatch(profileActions.profileUpdate(profile)),
 });
 
+
 export default connect(mapStateToProps, mapDispatchToProps)(TalentItem);
