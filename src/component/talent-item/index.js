@@ -57,10 +57,8 @@ class TalentItem extends React.Component {
     // console.log('imageURL', imageURL);
     return (
       <div className='talent-item'>
-      hello
         <h5>{profile.nickname}</h5>
         <p>
-          <img src={imageURL} />
           {profile.tools.top}
         </p>
         <p>{profile.tagline}</p>
