@@ -60,33 +60,41 @@ class TalentItem extends React.Component {
       'Atom': `${__AWS_S3_BUCKET__}/atom.png`,
       'Vim': `${__AWS_S3_BUCKET__}/vim.jpg`,
       'Emacs': `${__AWS_S3_BUCKET__}/Emacs-icon.png`,
+      'Test automation': '',
     };
 
     let imageOrText = (key) => imageAssign[key] ? <img className="talent-icon" src={imageAssign[key]}/> : <span>{imageAssign[key]}</span>;
 
     let mapImageOrText = (objectKey) => objectKey.map((item, i) => imageAssign[item] ? <img className="talent-icon" key={i} src={imageAssign[item]}/> : <span key={i}>{item}</span>);
 
+    let showOrHideText = (data = '', context = '') => {
+      if(data.length) return `${context}${data}`;
+    };
+
+    let showOrHideImage = (data = '', context, att = '') => {
+      if(data.length) return <p className={att}>{context} {mapImageOrText(data)}</p>;
+    };
 
     return (
       <div className='talent-item'>
         <h5>{profile.nickname}</h5>
         {imageOrText(profile.skills.top)}
         {imageOrText(profile.tools.top)}
-        <p>{profile.tagline}</p>
-        <p>{profile.employer}</p>
-        <p>{profile.coursework}</p>
-        <p>{profile.careerTagline}</p>
-        <p>{profile.location}</p>
-        <p>{profile.graduationDate}</p>
-        <p>{profile.codefellowsCourse}</p>
+        <p>{showOrHideText(profile.tagline)}</p>
+        <p>{showOrHideText(profile.employer, 'Current Employer: ')}</p>
+        <p>{showOrHideText(profile.coursework, 'Coursework: ')}</p>
+        <p>{showOrHideText(profile.careerTagline, 'Background Experience: ')}</p>
+        <p>{showOrHideText(profile.location, 'Location: ')}</p>
+        <p>{showOrHideText(profile.graduationDate, 'Graduated: ')}</p>
+        <p>{showOrHideText(profile.codefellowsCourse, 'Graduated: ')}</p>
         <p>{relocation}</p>
         <p>Looking for: {fulltime}{parttime}{apprenticeship}{internship}{freelance}opportunities! </p>
-        <p>{profile.roles.top}</p>
-        <p>{profile.roles.other.map((item) => `${item}  `)}</p>
-        <p>Skills to Learn: {mapImageOrText(profile.skills.learn)} End skills to learn</p>
-        <p>Good Skills: {mapImageOrText(profile.skills.good)}end good skills</p>
-        <p>tools good{mapImageOrText(profile.tools.good)}end tools good</p>
-        <p>tools learn{mapImageOrText(profile.tools.learn)}end tools learn</p>
+        <p>Prefer a role In: {profile.roles.top}</p>
+        <p>Also Interested in Roles Involving:{profile.roles.other.map((item) => `${item}  `)}</p>
+        {showOrHideImage(profile.skills.good, 'Additional Skill Experience: ')}
+        {showOrHideImage(profile.skills.learn, 'Skills Interested in Learning: ')}
+        {showOrHideImage(profile.tools.good, 'Additional Tool Experience: ')}
+        {showOrHideImage(profile.tools.learn, 'Tools Interested in Learning: ')}
 
         <button className="add-button" onClick={() => this.handleUpdateSelected(profile)}>
           {profile.selected ? 'Remove' : 'Add'}
