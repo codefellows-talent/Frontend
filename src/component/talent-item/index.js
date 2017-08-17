@@ -35,24 +35,25 @@ class TalentItem extends React.Component {
       'C# .NET': `${__AWS_S3_BUCKET__}/c%23.jpg`,
       'Android - Java': `${__AWS_S3_BUCKET__}/android.png`,
       'Java': `${__AWS_S3_BUCKET__}/java.png`,
-      'Front-end Web Development': '',
-      'Backend Development': '',
-      'Unit Testing': '',
-      'Building automation': '',
+      'Front-end Web Development': `${__AWS_S3_BUCKET__}/frontend.jpg`,
+      'Backend Development': `${__AWS_S3_BUCKET__}/backend.png`,
+      'Unit Testing': `${__AWS_S3_BUCKET__}/unittesting.png`,
+      'Build automation': `${__AWS_S3_BUCKET__}/buildauto.png`,
       'Angular': `${__AWS_S3_BUCKET__}/angular.png`,
       'React': `${__AWS_S3_BUCKET__}/react.png`,
       'React Native': `${__AWS_S3_BUCKET__}/react-native.png`,
       'HTML and CSS': `${__AWS_S3_BUCKET__}/html5-css3_icon.jpg`,
       'SQL': `${__AWS_S3_BUCKET__}/sql.png`,
       'Relational Database Design': '',
-      'Dev-Ops': '',
+      'Dev-Ops': `${__AWS_S3_BUCKET__}/devops.jpg`,
+
       'C or C++': `${__AWS_S3_BUCKET__}/c%2B%2B.png`,
       'Shell Scripting (e.g. BASH)': `${__AWS_S3_BUCKET__}/bash.png`,
       'Git': `${__AWS_S3_BUCKET__}/git.png`,
       'GitHub': `${__AWS_S3_BUCKET__}/github.png`,
       'Mongo': `${__AWS_S3_BUCKET__}/mongodb.png`,
       'Node.JS': `${__AWS_S3_BUCKET__}/nodejs.png`,
-      'Travis Cl': `${__AWS_S3_BUCKET__}/travis.png`,
+      'Travis CI': `${__AWS_S3_BUCKET__}/travis.png`,
       'AWS': `${__AWS_S3_BUCKET__}/aws.png`,
       'Azure': `${__AWS_S3_BUCKET__}/azure.png`,
       'Google Cloud Services': `${__AWS_S3_BUCKET__}/google-cloud.png`,
@@ -61,9 +62,9 @@ class TalentItem extends React.Component {
       'Emacs': `${__AWS_S3_BUCKET__}/Emacs-icon.png`,
     };
 
-    let imageOrText = (key) => imageAssign[key] ? <img src={imageAssign[key]}/> : <span>{imageAssign[key]}</span>;
+    let imageOrText = (key) => imageAssign[key] ? <img className="talent-icon" src={imageAssign[key]}/> : <span>{imageAssign[key]}</span>;
 
-    let mapImageOrText = (objectKey) => objectKey.map((item, i) => imageAssign[item] ? <img key={i} src={imageAssign[item]}/> : <span key={i}>{item}</span>);
+    let mapImageOrText = (objectKey) => objectKey.map((item, i) => imageAssign[item] ? <img key={i} className="talent-icon" src={imageAssign[item]}/> : <span key={i}>{item}</span>);
 
     return (
       <div className='talent-item'>
@@ -79,13 +80,13 @@ class TalentItem extends React.Component {
         <p>{profile.graduationDate}</p>
         <p>{profile.codefellowsCourse}</p>
         <p>{relocation}</p>
-        <p>Good Skills: {mapImageOrText(profile.skills.good)}</p>
-        <p>Skills to Learn: {mapImageOrText(profile.skills.learn)}</p>
         <p>Looking for: {fulltime}{parttime}{apprenticeship}{internship}{freelance}opportunities! </p>
-        <p>{mapImageOrText(profile.tools.good)}</p>
-        <p>{mapImageOrText(profile.tools.learn)}</p>
         <p>{profile.roles.top}</p>
         <p>{profile.roles.other.map((item) => `${item}  `)}</p>
+        <p>Skills to Learn: {mapImageOrText(profile.skills.learn)} End skills to learn</p>
+        <p>Good Skills: {mapImageOrText(profile.skills.good)}end good skills</p>
+        <p>tools good{mapImageOrText(profile.tools.good)}end tools good</p>
+        <p>tools learn{mapImageOrText(profile.tools.learn)}end tools learn</p>
 
         <button className="add-button" onClick={() => this.handleUpdateSelected(profile)}>
           {profile.selected ? 'Remove' : 'Add'}
