@@ -1,12 +1,14 @@
 import React from 'react';
-import { mount, unmount } from 'enzyme';
-
+import { mount } from 'enzyme';
+import superagent from 'superagent';
+import superagentMocker from 'superagent-mocker';
 import TalentItem from '../component/talent-item';
 import * as profileActions from '../action/profile-actions.js';
 import storeCreate from '../lib/store-create.js';
 import {Provider} from 'react-redux';
 import expect from 'expect';
 
+let mockAPI = superagentMocker(superagent);
 
 let mockProfile = {
   salesforceId: '00361000014StPs',
@@ -69,4 +71,5 @@ describe('TalentItem Tests', () => {
     expect(wrapper.nodes[0].props.children).toExist();
     expect(wrapper.nodes[0].props.children.props.profile.salesforceId).toEqual(mockProfile.salesforceId);
   });
+
 });

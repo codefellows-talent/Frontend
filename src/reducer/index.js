@@ -4,5 +4,4 @@ import profileReducer from './profile.js';
 
 export default combineReducers({
   profiles: profileReducer,
-  connect: connectReducer,
 });
