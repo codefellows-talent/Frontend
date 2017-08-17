@@ -10,7 +10,7 @@ class LandingContainer extends React.Component{
       <div>
         <img className='landing-hero' src='https://s3.amazonaws.com/codefellows-hiring-partners/helloquence-61189.jpg'/>
         <h1 id="grad-hiring">Graduate Hiring</h1>
-        <h6 id="grad-hiring-info">Anonymously find the perfect candidate for you.</h6>
+        <h6 id="grad-hiring-info">Unbiased Resumes to Identify Qualified Candidates</h6>
         <div className='graduate-image-container'>
           <div className='graduate-image'></div>
           <div className='graduate-image'></div>
@@ -47,7 +47,11 @@ class LandingContainer extends React.Component{
           <img className='landing-hero2' src='https://s3.amazonaws.com/codefellows-hiring-partners/Screen+Shot+2017-08-14+at+11.27.09+PM.png'/>
           <div id="take-a-look">
             <h2 id="grad-explination">Take a Look</h2>
-            <h6 id="grad-explination-text">With the industrys shortage for software developers, tech companies have found a reliable talent pipeline at Code Fellows. By focusing on training diverse, highly capable developers, we’re opening doors for companies to bring in new talent and diversify the abilities and the culture of their teams. Please take a look and possibly join Expedia, OfferUp, Nordstrom, Nike, and over 400 other companies who have hired our grads.</h6>
+            <h6 id="grad-explination-text">
+              Resume bias is a well documented occurrence. It refers to the prejudice for or against a candidates resume based on characteristics inferred from the document. These characteristics might include the candidates name, age, gender, interests, ethnicity, social status, appearance, or any other characteristic a hiring professional might derive an inference from unintentionally.
+
+              In an effort to meet the needs of a growing tech marketplace requiring new talent, perspective, ideas and diversity we have created a 'blind' unbiased resume source. Here randomized candidates can provide raw data to be evaluated upon without many of the naturally occurring biases present in a traditional resume.
+            </h6>
             <Link to='/talents' className='landing-talent-button'>Talent</Link>
           </div>
         </div>
