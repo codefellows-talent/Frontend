@@ -1,7 +1,12 @@
 @import "./_vars.scss";
 
 
-
+h1{
+  font-size: 6em;
+}
+h6{
+  font-size: 2em;
+}
 //Landing hero 1
 .landing-hero{
   margin-top: 10vh;
@@ -10,9 +15,7 @@
   filter: brightness(.25);
   position: relative;
 }
-h1{
-  font-size: 5em;
-}
+
 
 #grad-hiring{
   color: $color-white;
@@ -167,7 +170,7 @@ h1{
     }
 
     #grad-hiring{
-      color: $Buttons;
+      color: $color-white;
       font-family: $font-title;
       font-size: 1.2em;
       position: absolute;

@@ -60,46 +60,44 @@ class TalentItem extends React.Component {
       'Vim': `${__AWS_S3_BUCKET__}/vim.jpg`,
       'Emacs': `${__AWS_S3_BUCKET__}/Emacs-icon.png`,
       'Test Automation': `${__AWS_S3_BUCKET__}/automatedtesting.png`,
+
     };
 
     let imageOrText = (key) => imageAssign[key] ? <img className="talent-icon" src={imageAssign[key]}/> : <span>{imageAssign[key]}</span>;
 
     let mapImageOrText = (objectKey) => objectKey.map((item, i) => imageAssign[item] ? <img className="talent-icon" key={i} src={imageAssign[item]}/> : <span key={i}>{item}</span>);
 
+    let showOrHideText = (data = '', context = '') => {
+      if(data.length) return `${context}${data}`;
+    };
+
+    let showOrHideImage = (data = '', context, att = '') => {
+      if(data.length) return <p className={att}>{context} {mapImageOrText(data)}</p>;
+    };
 
     return (
       <div className='talent-item'>
-        <h5 id='nickname'>{profile.nickname}</h5>
-        <div className='skill-tool-icon-container'>
-          <div className='skill-tool-icon'>
-            {imageOrText(profile.skills.top)}
-            {imageOrText(profile.tools.top)}
-          </div>
-        </div>
-        <p>{profile.tagline}</p>
-        <p>{profile.employer}</p>
-        <p>{profile.coursework}</p>
-        <p>{profile.careerTagline}</p>
-        <p>{profile.location}</p>
-        <p>{profile.graduationDate}</p>
-        <p>{profile.codefellowsCourse}</p>
+        <h5>{profile.nickname}</h5>
+        <p id='img1'>{imageOrText(profile.skills.top)}
+          {imageOrText(profile.tools.top)}</p>
+        <p>{showOrHideText(profile.tagline)}</p>
+        <p>{showOrHideText(profile.employer, 'Current Employer: ')}</p>
+        <p>{showOrHideText(profile.coursework, 'Coursework: ')}</p>
+        <p>{showOrHideText(profile.careerTagline, 'Background Experience: ')}</p>
+        <p>{showOrHideText(profile.location, 'Location: ')}</p>
+        <p>{showOrHideText(profile.graduationDate, 'Graduated: ')}</p>
+        <p>{showOrHideText(profile.codefellowsCourse, 'Graduated: ')}</p>
         <p>{relocation}</p>
         <p>Looking for: {fulltime}{parttime}{apprenticeship}{internship}{freelance}opportunities! </p>
+        <p className='icon'>Prefer a role In:</p>
         <p>{profile.roles.top}</p>
+        <p className='icon'>Also Interested in Roles Involving:</p>
         <p>{profile.roles.other.map((item) => `${item}  `)}</p>
-        <div className='bold'>
-          <p >Skills to Learn:</p>
-          <p className='icon'>{mapImageOrText(profile.skills.learn)} </p>
-          <br></br>
-          <p>Skills:</p>
-          <p className='icon'>{mapImageOrText(profile.skills.good)}</p>
-          <br></br>
-          <p>Tools:</p>
-          <p className='icon'>{mapImageOrText(profile.tools.good)}</p>
-          <br></br>
-          <p>Future Tools:</p>
-          <p className='icon'>{mapImageOrText(profile.tools.learn)}</p>
-        </div>
+        {showOrHideImage(profile.skills.good, 'Additional Skill Experience: ', 'icon')}
+        {showOrHideImage(profile.skills.learn, 'Skills Interested in Learning: ', 'icon')}
+        {showOrHideImage(profile.tools.good, 'Additional Tool Experience: ', 'icon')}
+        {showOrHideImage(profile.tools.learn, 'Tools Interested in Learning: ', 'icon')}
+
 
         <button className="add-button" onClick={() => this.handleUpdateSelected(profile)}>
           {profile.selected ? 'Remove' : 'Add'}
