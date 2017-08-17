@@ -53,14 +53,12 @@ class TalentItem extends React.Component {
       'Emacs': '',
     };
 
-    // let imageURL = require(`${__dirname}/../../style/assets/icons/${imageAssign[profile.skills.top]}`);
-    // console.log('imageURL', imageURL);
     return (
       <div className='talent-item'>
       hello
         <h5>{profile.nickname}</h5>
         <p>
-          <img src={imageURL} />
+          <img src={imageAssign[profile.skills.top]} />
           {profile.tools.top}
         </p>
         <p>{profile.tagline}</p>
