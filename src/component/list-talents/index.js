@@ -30,7 +30,8 @@ class ListTalents extends React.Component {
       <div className="list-talents">
         <div>
           <p>Profiles Selected: {this.handleCountSelected(this.props.profiles)}</p>
-          <Link to='/connect' className=''>Connect Me!</Link>
+          <p>Number of Developers: {this.props.profiles.length}</p>
+          <button><Link to='/connect' className=''>Connect Me!</Link></button>
         </div>
 
         {this.props.profiles.map(studentProfile => {

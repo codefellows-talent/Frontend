@@ -3,6 +3,8 @@ import React from 'react';
 import superagent from 'superagent';
 import { connect } from 'react-redux';
 
+import * as util from '../../lib/util.js';
+import * as profileActions from '../../action/profile-actions.js';
 import TalentItem from '../talent-item';
 
 class ConnectForm extends React.Component {
@@ -10,7 +12,7 @@ class ConnectForm extends React.Component {
     super(props);
     let selected = [];
     props.profiles.forEach(profile => profile.selected ? selected.push(profile.salesforceId) : null);
-
+    
     this.state = {
       name: '',
       email: '',
@@ -43,7 +45,14 @@ class ConnectForm extends React.Component {
         company: this.state.company,
       })
       .then(res => {
-        console.log(res);
+        localStorage.setItem('contacted',JSON.stringify(this.state));
+       
+        this.props.profiles.forEach(profile =>{
+          if(this.state.ids.includes(profile.salesforceId)){
+            profile.contacted = true;
+            this.props.profileUpdate(profile);
+          }
+        });
       })
       .catch(err => {
         console.error(err);
@@ -57,7 +66,7 @@ class ConnectForm extends React.Component {
           <input
             name='name'
             type='text'
-            maxlength='255'
+            maxLength='255'
             required
             value={this.state.name}
             onChange={this.handleChange}
@@ -84,6 +93,7 @@ class ConnectForm extends React.Component {
             <input id="checkbox"
               name='terms'
               type='checkbox'
+              required
               value={this.state.terms}
               onChange={this.handleChange}
             /> <p id="checkbox-text">Terms of Use</p>
@@ -109,7 +119,7 @@ let mapStateToProps = (state) => ({
 });
 
 let mapDispatchToProps = (dispatch) => ({
-
+  profileUpdate: (profile) => dispatch(profileActions.profileUpdate(profile)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ConnectForm);
