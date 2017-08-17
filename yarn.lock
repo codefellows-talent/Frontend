@@ -2258,6 +2258,10 @@ find-up@^2.0.0, find-up@^2.1.0:
   dependencies:
     locate-path "^2.0.0"
 
+fisher-yates-shuffle@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/fisher-yates-shuffle/-/fisher-yates-shuffle-0.1.2.tgz#5177da38e147e83cc9241dfcd906030c20748873"
+
 flat-cache@^1.2.1:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/flat-cache/-/flat-cache-1.2.2.tgz#fa86714e72c21db88601761ecf2f555d1abc6b96"
@@ -3426,6 +3430,10 @@ kind-of@^4.0.0:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-4.0.0.tgz#20813df3d712928b207378691a45066fae72dd57"
   dependencies:
     is-buffer "^1.1.5"
+
+knuth-shuffle@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/knuth-shuffle/-/knuth-shuffle-1.0.1.tgz#454940ae816c14e1af6e6f09d8828818f95b5191"
 
 lazy-cache@^0.2.3:
   version "0.2.7"
