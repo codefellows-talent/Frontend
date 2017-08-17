@@ -61,14 +61,13 @@ class TalentItem extends React.Component {
       'Emacs': `${__AWS_S3_BUCKET__}/Emacs-icon.png`,
     };
 
-    let imageOrText = (key) => imageAssign[key] ? <img src={imageAssign[key]}/> : <span>{imageAssign[key]}</span>;
+    let imageOrText = (key) => imageAssign[key] ? <img className="talent-icon" src={imageAssign[key]}/> : <span>{imageAssign[key]}</span>;
 
-    let mapImageOrText = (objectKey) => objectKey.map((item, i) => imageAssign[item] ? <img key={i} src={imageAssign[item]}/> : <span key={i}>{item}</span>);
+    let mapImageOrText = (objectKey) => objectKey.map((item, i) => imageAssign[item] ? <img className="talent-icon" key={i} src={imageAssign[item]}/> : <span key={i}>{item}</span>);
 
     return (
       <div className='talent-item'>
         <h5>{profile.nickname}</h5>
-        <img className="talent-icon" src={imageAssign[profile.skills.top]}></img>
         {imageOrText(profile.skills.top)}
         {imageOrText(profile.tools.top)}
         <p>{profile.tagline}</p>
