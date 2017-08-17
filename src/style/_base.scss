@@ -5,6 +5,10 @@ body {
   position: relative;
   display: block;
 }
+h1{
+  font-size: 5em;
+}
+
 //nav----------------------
 header img {
   margin-top: 1%;
@@ -25,10 +29,9 @@ nav li {
   margin-left: 15%;
 }
 nav ul{
-  float: left;
-  position: absolute;
   margin-left: -5%;
   margin-top: 2.0%;
+  display: inline;
 }
 nav{
   position: fixed;

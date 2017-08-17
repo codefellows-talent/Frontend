@@ -46,7 +46,7 @@ class LandingContainer extends React.Component{
         <div>
           <img className='landing-hero2' src='https://s3.amazonaws.com/codefellows-hiring-partners/Screen+Shot+2017-08-14+at+11.27.09+PM.png'/>
           <div id="take-a-look">
-            <h1 id="grad-explination">Take a Look</h1>
+            <h2 id="grad-explination">Take a Look</h2>
             <h6 id="grad-explination-text">With the industrys shortage for software developers, tech companies have found a reliable talent pipeline at Code Fellows. By focusing on training diverse, highly capable developers, we’re opening doors for companies to bring in new talent and diversify the abilities and the culture of their teams. Please take a look and possibly join Expedia, OfferUp, Nordstrom, Nike, and over 400 other companies who have hired our grads.</h6>
             <Link to='/talents' className='landing-talent-button'>Talent</Link>
           </div>
