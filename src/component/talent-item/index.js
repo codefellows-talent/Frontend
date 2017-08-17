@@ -1,4 +1,4 @@
-import '../../style/_talent-item.scss';
+//import '../../style/_talent-item.scss';
 import React from 'react';
 import {connect} from 'react-redux';
 import * as profileActions from '../../action/profile-actions.js';

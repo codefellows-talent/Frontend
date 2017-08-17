@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "jest": {
+    "globals": {
+      "__AWS_S3_BUCKET__": "https://s3fakeness/"
+    }
+  },
   "scripts": {
     "test": "jest",
     "lint": "eslint .",
@@ -50,5 +55,9 @@
     "validator": "^8.0.0",
     "webpack": "^3.5.4",
     "webpack-dev-server": "^2.7.1"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0",
+    "superagent-mocker": "^0.5.2"
   }
 }
