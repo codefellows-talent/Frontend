@@ -27,15 +27,25 @@ class ListTalents extends React.Component {
 
   render () {
     return (
-      <div className="list-talents">
-        <div>
-          <p>Profiles Selected: {this.handleCountSelected(this.props.profiles)}</p>
-          <Link to='/connect' className=''>Connect Me!</Link>
-        </div>
+      <div>
+        <h1 id='the-talent'>The Talent</h1>
+        <img className='landing-hero-3' src='https://s3.amazonaws.com/codefellows-hiring-partners/craig-garner-202.jpg'/>
+        <div className="list-talents">
+          <div>
+            <p>Profiles Selected: {this.handleCountSelected(this.props.profiles)}</p>
+            <Link to='/connect' className='connect-me-button'>Connect Me!</Link>
+          </div>
 
-        {this.props.profiles.map(studentProfile => {
-          return <TalentItem key={studentProfile.salesforceId} profile={studentProfile}/>;
-        })}
+          {this.props.profiles.map(studentProfile => {
+            return <TalentItem key={studentProfile.salesforceId} profile={studentProfile}/>;
+          })}
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <p>Profiles Selected: {this.handleCountSelected(this.props.profiles)}</p>
+          <Link to='/connect' className='connect-me-button'>Connect Me!</Link>
+        </div>
       </div>
     );
   }
