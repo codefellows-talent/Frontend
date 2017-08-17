@@ -1,11 +1,21 @@
 @import "./_vars.scss";
 
-*{
-  font-family: arial;
+#the-talent{
+  position: absolute;
+  margin-top: 14%;
+  z-index: 90;
+  color: $color-white;
+  font-family: $font-title;
+  text-align: center;
 }
-body{
-  background: white;
+.landing-hero-3{
+  margin-top: 10vh;
+  width: 100vw;
+  height: 48vh;
+  filter: brightness(.25);
+  position: relative;
 }
+
 div.list-talents{
   display: inline-block;
   margin-top: 12vh;
@@ -14,11 +24,15 @@ div.list-talents{
   margin-left: 10%;
   padding: 10px;
 }
+.connect-me-button{
+  color: $Buttons;
+}
+
 p{
-  color: black;
+  color: $color-black;
 }
 button{
-  color: white;
+  color: $color-white;
   position: absolute;
   left: 70vw;
   width: 20%;
@@ -43,11 +57,19 @@ button{
   .list-talents{
     margin-top: 20%;
   }
+  #the-talent{
+    position: absolute;
+    margin-top: 35%;
+    z-index: 90;
+    color: $color-white;
+    font-family: $font-title;
+    text-align: center;
+  }
   p{
     font-size: .8em;
   }
   button{
-    color: white;
+    color: $color-white;
     position: absolute;
     left: 70vw;
     width: 20%;
@@ -59,4 +81,11 @@ button{
     font-size: .5em;
     margin-top: 2%;
   }
+}
+
+*{
+  font-family: arial;
+}
+body{
+  background: $color-white;
 }

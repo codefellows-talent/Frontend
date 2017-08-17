@@ -61,7 +61,9 @@ class ConnectForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="connect-container">
+        <h1 id='connect'>Connect</h1>
+        <img className='landing-hero-3' src='https://s3.amazonaws.com/codefellows-hiring-partners/freddy-castro-133328.jpg'/>
         <form className='connect-form' onSubmit={this.handleSubmit} >
           <input
             name='name'
