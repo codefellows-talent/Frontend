@@ -10,6 +10,9 @@
   filter: brightness(.25);
   position: relative;
 }
+h1{
+  font-size: 5em;
+}
 
 #grad-hiring{
   color: $Buttons;
@@ -25,7 +28,7 @@
   font-family: $font-title;
   position: absolute;
   text-align: center;
-  top: 32vh;
+  top: 40vh;
   left: 0;
   width: 100%;
 }
@@ -41,13 +44,14 @@
 }
 #take-a-look{
   width: 100%;
+  transform: translateY(-300px);
 }
 #grad-explination{
   color: $color-white;
   font-family: $font-title;
-  position: absolute;
+  // position: absolute;
   text-align: center;
-  top: 115vh;
+  top: 100vh;
   left: 0;
   width: 100vw;
 }
@@ -55,20 +59,21 @@
 #grad-explination-text{
   color: $color-white;
   font-family: $font-title;
-  position: absolute;
+  // position: absolute;
   text-align: left;
   font-size: calc(1em * 1.1);
-  top: 125vh;
+  top: 105vh;
   left: 0;
   width: 80%;
   margin-left: 10%;
 }
 .landing-talent-button {
   color: $color-white;
-  position: absolute;
-  left: 45vw;
-  width: 10%;
-  top: 135vh;
+  // position: absolute;
+  margin-left: 45%;
+
+  width: 100%;
+  top: 115vh;
   text-align: center;
   background-color: $Buttons;
   padding: $pad;
@@ -143,7 +148,15 @@
 
 @media only screen and (max-width: 500px) {
 
+  h1{
+    font-size: 5em;
+  }
 
+
+  #take-a-look{
+    width: 100%;
+    transform: translateY(-145px);
+  }
     //Landing hero 1
     .landing-hero{
       margin-top: 10vh;
@@ -191,7 +204,6 @@
       color: $color-white;
       font-family: $font-title;
       font-size: 1.2em;
-      position: absolute;
       text-align: center;
       top: 68vh;
       left: 0;
@@ -203,7 +215,6 @@
       color: $color-white;
       font-family: $font-title;
       font-size: 0.4em;
-      position: absolute;
       text-align: left;
       top: 73vh;
       left: 0;
@@ -213,9 +224,8 @@
     }
     .landing-talent-button {
       color: $color-white;
-      position: absolute;
-      width: 10%;
-      left: 45;
+      width: 100%;
+      margin-left: 45%;
       top: 88vh;
       text-align: center;
       font-size: .08em;

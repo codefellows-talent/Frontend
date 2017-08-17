@@ -25,7 +25,19 @@ div.list-talents{
   padding: 10px;
 }
 .connect-me-button{
-  color: $Buttons;
+  color: $color-white;
+  background-color: $Buttons;
+  padding: $pad;
+  line-height: 40px;
+  border-radius: 30px;
+}
+#connect-div{
+  width: 10%;
+  background-color: $color-white;
+  float: right;
+  z-index: 299;
+  position: fixed;
+  text-align: center;
 }
 
 p{
@@ -58,6 +70,24 @@ button{
   .list-talents{
     margin-top: 20%;
   }
+  #connect-div{
+    width: 5%;
+    background-color: $color-white;
+    float: right;
+    z-index: 299;
+    position: fixed;
+  }
+  .connect-me-button{
+    color: $color-white;
+    background-color: $Buttons;
+    padding: $pad;
+    line-height: 40px;
+    border-radius: 30px;
+  }
+  h1{
+    font-size: 2em;
+  }
+
   #the-talent{
     position: absolute;
     margin-top: 35%;
