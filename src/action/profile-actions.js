@@ -2,7 +2,11 @@ import superagent from 'superagent';
 import shuffle from 'knuth-shuffle';
 
 export const profileSet = (profiles) => {
-  let {ids} = JSON.parse(localStorage.getItem('contacted'));
+  let localStorageJSON = JSON.parse(localStorage.getItem('contacted'));
+  let ids = [];
+  if(localStorageJSON) 
+    ids = localStorageJSON.ids;
+
   profiles = profiles.filter(studentProfile => {
     studentProfile.contacted = false;
     studentProfile.selected = false;
