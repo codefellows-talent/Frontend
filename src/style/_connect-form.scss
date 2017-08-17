@@ -16,9 +16,9 @@ body{
   margin-top: 3%;
   padding-bottom: 1%;
 }
-.landing-hero-3{
+.landing-hero-4{
   margin-top: 10vh;
-  width: 100vw;
+  width: 100%;
   height: 48vh;
   filter: brightness(.25);
   position: relative;
@@ -45,9 +45,23 @@ form{
   float: left;
   width: 25%;
 }
-.connect-container h5, .connect-container span, .connect-container p, .connect-container img{
+.connect-container h5, .connect-container span, .connect-container p{
   width: 80%;
   margin-left: 10%;
+}
+.skill-tool-icon {
+  display: inline;
+}
+.skill-tool-icon-container{
+  padding-left: 10%;
+  width: 80%;
+}
+img .talent-icon{
+  display: inline;
+
+}
+.skill-tool-icon p{
+  display: inline;
 }
 
 @media only screen and (max-width: 500px) {
@@ -58,9 +72,9 @@ form{
     display: inline-block;
     margin-top: 5%;
   }
-  .landing-hero-3{
+  .landing-hero-4{
     margin-top: 10vh;
-    width: 100vw;
+    width: 100%;
     height: 30vh;
     filter: brightness(.25);
     position: relative;

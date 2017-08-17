@@ -46,7 +46,6 @@ class TalentItem extends React.Component {
       'SQL': `${__AWS_S3_BUCKET__}/sql.png`,
       'Relational Database Design': '',
       'Dev-Ops': `${__AWS_S3_BUCKET__}/devops.jpg`,
-
       'C or C++': `${__AWS_S3_BUCKET__}/c%2B%2B.png`,
       'Shell Scripting (e.g. BASH)': `${__AWS_S3_BUCKET__}/bash.png`,
       'Git': `${__AWS_S3_BUCKET__}/git.png`,
@@ -60,6 +59,7 @@ class TalentItem extends React.Component {
       'Atom': `${__AWS_S3_BUCKET__}/atom.png`,
       'Vim': `${__AWS_S3_BUCKET__}/vim.jpg`,
       'Emacs': `${__AWS_S3_BUCKET__}/Emacs-icon.png`,
+      'Test Automation': `${__AWS_S3_BUCKET__}/automatedtesting.png`,
     };
 
     let imageOrText = (key) => imageAssign[key] ? <img className="talent-icon" src={imageAssign[key]}/> : <span>{imageAssign[key]}</span>;
@@ -69,9 +69,13 @@ class TalentItem extends React.Component {
 
     return (
       <div className='talent-item'>
-        <h5>{profile.nickname}</h5>
-        {imageOrText(profile.skills.top)}
-        {imageOrText(profile.tools.top)}
+        <h5 id='nickname'>{profile.nickname}</h5>
+        <div className='skill-tool-icon-container'>
+          <div className='skill-tool-icon'>
+            {imageOrText(profile.skills.top)}
+            {imageOrText(profile.tools.top)}
+          </div>
+        </div>
         <p>{profile.tagline}</p>
         <p>{profile.employer}</p>
         <p>{profile.coursework}</p>
@@ -83,10 +87,19 @@ class TalentItem extends React.Component {
         <p>Looking for: {fulltime}{parttime}{apprenticeship}{internship}{freelance}opportunities! </p>
         <p>{profile.roles.top}</p>
         <p>{profile.roles.other.map((item) => `${item}  `)}</p>
-        <p>Skills to Learn: {mapImageOrText(profile.skills.learn)} End skills to learn</p>
-        <p>Good Skills: {mapImageOrText(profile.skills.good)}end good skills</p>
-        <p>tools good{mapImageOrText(profile.tools.good)}end tools good</p>
-        <p>tools learn{mapImageOrText(profile.tools.learn)}end tools learn</p>
+        <div className='bold'>
+          <p >Skills to Learn:</p>
+          <p className='icon'>{mapImageOrText(profile.skills.learn)} </p>
+          <br></br>
+          <p>Skills:</p>
+          <p className='icon'>{mapImageOrText(profile.skills.good)}</p>
+          <br></br>
+          <p>Tools:</p>
+          <p className='icon'>{mapImageOrText(profile.tools.good)}</p>
+          <br></br>
+          <p>Future Tools:</p>
+          <p className='icon'>{mapImageOrText(profile.tools.learn)}</p>
+        </div>
 
         <button className="add-button" onClick={() => this.handleUpdateSelected(profile)}>
           {profile.selected ? 'Remove' : 'Add'}
