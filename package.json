@@ -4,12 +4,17 @@
   "main": "index.js",
   "license": "MIT",
   "jest": {
+    "moduleNameMapper": {
+      "\\.(scss|mp3|mov|mp4|wat|jpg|jpeg|gif|png|svg|tiff)$": "<rootDir>/src/__test__/lib/webpack-assets-faker.js"
+    },
     "globals": {
+      "__DEBUG__": true,
+      "__API_URL__": "http://localhost:7777",
       "__AWS_S3_BUCKET__": "https://s3fakeness/"
     }
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "lint": "eslint .",
     "build": "webpack",
     "start": "node index.js",
