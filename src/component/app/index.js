@@ -8,11 +8,15 @@ import Footer from '../footer';
 import ListTalents from '../list-talents';
 import ConnectForm from '../connect-form';
 
+const scrollTop = () => {
+  window.scrollTo(0, 0);
+};
+
 class App extends React.Component {
   render () {
     return (
       <div className='app'>
-        <BrowserRouter>
+        <BrowserRouter onUpdate={scrollTop}>
           <div>
             <Header />
             <Route exact path='/' component={LandingContainer}/>

@@ -60,7 +60,7 @@ class TalentItem extends React.Component {
     return (
       <div className='talent-item'>
         <h5>{profile.nickname}</h5>
-        <img src={imageAssign[profile.skills.top]}></img>
+        <img className="talent-icon" src={imageAssign[profile.skills.top]}></img>
         <p>
           {profile.tools.top}
         </p>
