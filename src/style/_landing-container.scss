@@ -74,8 +74,9 @@ h6{
   color: $color-white;
   margin-left: 45%;
   top: 30;
-  width: 100%;
-  top: 115vh;
+  width: 10%;
+  top: 25vh;
+  position: absolute;
   text-align: center;
   background-color: $Buttons;
   padding: $pad;
@@ -196,7 +197,7 @@ h6{
     .landing-hero2{
       margin-top: 7%;
       width: 100vw;
-      height: 28vh;
+      height: 34vh;
       filter: brightness(.4);
       position: relative;
     }
@@ -207,7 +208,7 @@ h6{
       font-family: $font-title;
       font-size: 1.2em;
       text-align: center;
-      top: 68vh;
+      margin-top: -10%;
       left: 0;
       width: 100%;
       z-index: 100;
@@ -218,7 +219,7 @@ h6{
       font-family: $font-title;
       font-size: 0.4em;
       text-align: left;
-      top: 73vh;
+      margin-top: -10%;
       left: 0;
       width: 80%;
       z-index: 100;
@@ -226,9 +227,9 @@ h6{
     }
     .landing-talent-button {
       color: $color-white;
-      width: 100%;
+      width: 10%;
       margin-left: 45%;
-      top: 88vh;
+      top: 23vh;
       text-align: center;
       font-size: .08em;
       background-color: $Buttons;
