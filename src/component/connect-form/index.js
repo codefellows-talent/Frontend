@@ -89,7 +89,7 @@ class ConnectForm extends React.Component {
         <img className='landing-hero-4' src='https://s3.amazonaws.com/codefellows-hiring-partners/freddy-castro-133328.jpg' />
         {
           (() => {
-            if(!this.state.successfullyConnected && !this.state.connectAttempt)
+            if(!this.state.successfullyConnected && this.state.connectAttempt === 0)
               return <h3 className="contact-form-header">Contact Form:</h3>;
             else if (this.state.successfullyConnected)
               return <h3 className="contact-form-header">You have successfully connected to {this.state.ids.length} Graduates!</h3>;
@@ -129,6 +129,7 @@ class ConnectForm extends React.Component {
               name='terms'
               type='checkbox'
               required
+              oninvalid='this.setCustomValidity("You need to agreee to the Terms of Use");'
               value={this.state.terms}
               onChange={this.handleChange}
             /> <p id="checkbox-text" onClick={this.openModal}>Terms of Use</p>
