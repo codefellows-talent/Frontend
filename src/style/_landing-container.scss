@@ -1,7 +1,12 @@
 @import "./_vars.scss";
 
 
-
+h1{
+  font-size: 6em;
+}
+h6{
+  font-size: 2em;
+}
 //Landing hero 1
 .landing-hero{
   margin-top: 10vh;
@@ -10,12 +15,10 @@
   filter: brightness(.25);
   position: relative;
 }
-h1{
-  font-size: 5em;
-}
+
 
 #grad-hiring{
-  color: $Buttons;
+  color: $color-white;
   font-family: $font-title;
   position: absolute;
   text-align: center;
@@ -62,16 +65,15 @@ h1{
   // position: absolute;
   text-align: left;
   font-size: calc(1em * 1.1);
-  top: 105vh;
+  top: 115vh;
   left: 0;
   width: 80%;
   margin-left: 10%;
 }
 .landing-talent-button {
   color: $color-white;
-  // position: absolute;
   margin-left: 45%;
-
+  top: 30;
   width: 100%;
   top: 115vh;
   text-align: center;
@@ -167,7 +169,7 @@ h1{
     }
 
     #grad-hiring{
-      color: $Buttons;
+      color: $color-white;
       font-family: $font-title;
       font-size: 1.2em;
       position: absolute;

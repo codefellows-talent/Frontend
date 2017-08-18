@@ -6,7 +6,10 @@ body {
   display: block;
 }
 h1{
-  font-size: 5em;
+  font-size: 7em;
+}
+h6{
+  font-size: 4em;
 }
 
 //nav----------------------
@@ -21,12 +24,13 @@ a{
   list-style-type: none;
   color: $color-white;
   font-family: $font-title;
-
+  margin-left: 10%;
 }
 nav li {
   line-height: 20px;
   display: inline;
   margin-left: 15%;
+
 }
 nav ul{
   margin-left: -5%;
@@ -72,7 +76,7 @@ nav{
     position: fixed;
     z-index: 999;
     background: $color-black;
-    height: 9%;
+    height: 7%;
     display: inline;
   }
 }

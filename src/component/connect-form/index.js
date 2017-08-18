@@ -81,7 +81,7 @@ class ConnectForm extends React.Component {
     return (
       <div className="connect-container">
         <h1 id='connect'>Connect</h1>
-        <img className='landing-hero-3' src='https://s3.amazonaws.com/codefellows-hiring-partners/freddy-castro-133328.jpg' />
+        <img className='landing-hero-4' src='https://s3.amazonaws.com/codefellows-hiring-partners/freddy-castro-133328.jpg' />
         {
           (() => {
             if(!this.state.successfullyConnected && !this.state.connectAttempt)
@@ -140,9 +140,9 @@ class ConnectForm extends React.Component {
           <div className='modal-content'>
             Bacon ipsum dolor amet strip steak brisket flank, turducken kielbasa biltong boudin. Meatloaf biltong cupim ribeye hamburger landjaeger short ribs. Bacon frankfurter corned beef capicola ball tip jerky cow strip steak pork belly. Fatback corned beef meatloaf chicken. Prosciutto frankfurter short loin, meatball fatback jowl leberkas flank ham hock pork belly swine tail salami. Swine bresaola chicken sausage pancetta jerky salami hamburger shoulder corned beef bacon ball tip drumstick andouille. Rump pork loin pastrami brisket. Bacon ipsum dolor amet strip steak brisket flank, turducken kielbasa biltong boudin. Meatloaf biltong cupim ribeye hamburger landjaeger short ribs. Bacon frankfurter corned beef capicola ball tip jerky cow strip steak pork belly. Fatback corned beef meatloaf chicken. Prosciutto frankfurter short loin, meatball fatback jowl leberkas flank ham hock pork belly swine tail salami. Swine bresaola chicken sausage pancetta jerky salami hamburger shoulder corned beef bacon ball tip drumstick andouille. Rump pork loin pastrami brisket. Bacon ipsum dolor amet strip steak brisket flank, turducken kielbasa biltong boudin. Meatloaf biltong cupim ribeye hamburger landjaeger short ribs. Bacon frankfurter corned beef capicola ball tip jerky cow strip steak pork belly. Fatback corned beef meatloaf chicken. Prosciutto frankfurter short loin, meatball fatback jowl leberkas flank ham hock pork belly swine tail salami. Swine bresaola chicken sausage pancetta jerky salami hamburger shoulder corned beef bacon ball tip drumstick andouille. Rump pork loin pastrami brisket. Bacon ipsum dolor amet strip steak brisket flank, turducken kielbasa biltong boudin. Meatloaf biltong cupim ribeye hamburger landjaeger short ribs. Bacon frankfurter corned beef capicola ball tip jerky cow strip steak pork belly. Fatback corned beef meatloaf chicken. Prosciutto frankfurter short loin, meatball fatback jowl leberkas flank ham hock pork belly swine tail salami. Swine bresaola chicken sausage pancetta jerky salami hamburger shoulder corned beef bacon ball tip drumstick andouille. Rump pork loin pastrami brisket.
           </div>
-          <button onClick={this.closeModal}>CLOSE</button>
+          <button className='close-button' onClick={this.closeModal}>CLOSE</button>
         </Modal>
-        <h4>Selected Profiles to be contacted:</h4>
+        <h5>Selected Profiles to be contacted:</h5>
         {
           this.props.profiles.map(profile => {
             if (profile.selected)
