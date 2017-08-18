@@ -1,5 +1,4 @@
 import superagent from 'superagent';
-import shuffle from 'knuth-shuffle';
 
 export const profileSet = (profiles) => {
   let localStorageJSON = JSON.parse(localStorage.getItem('contacted'));
@@ -30,5 +29,8 @@ export const profilesFetchRequest = () => (dispatch) => {
     .then((res) => {
       dispatch(profileSet(res.body));
       return res;
+    })
+    .catch(err => {
+      return new Error('Cant reach Server');
     });
 };
