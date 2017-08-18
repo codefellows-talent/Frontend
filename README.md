@@ -53,10 +53,13 @@ A profile-action triggered when setting the profiles adds the properties 'contac
 
 There are several functions written to handle various states of true/false and empty string/string to populate the user profiles. These include several ternary statements to solve true false conditions. An object called imageAssign to map text to an image icon. imageOrText/mapImageOrText which displays the proper icon of image assign when present, but for something more difficult like 'Relational Database Management' it displays the text. Map maps the keys of an array when used to avoid react errors. showOrHideText/showOrHideImage show or hide the pre-content based on whether values are present. Attributes can be included.
 
-### Navigating at '/contacts'
+### Navigating at '/connect'
+To navigate to '/connect', the user must first go to the '/talent' page and select users then click the connect me button. Once you are in the '/connect' page you must fill in all the required values in the form or else the user will not be able to successfully connect. After hitting the connect button the user will be notified if it was successful or not. Finally the user will be able to check their email with the confirmation email.
 
 
+### Code at '/connect'
+The connect page utilizes list-talent component to rendered the selected profiles as well as the ReactModal component to render the terms of use. The form values are updated in the component state. After hitting send, a call to the backend route '/api/v1/connect' is made. The email, ids, name, terms and company are sent to as part of the body. 
 
+If we get a successful response from the backend, the ids are then stored on local storage in local storage so that on the when user goes to the talent page again, the contacted profiles will not show up.
 
-
-### Code at '/contacts'
+If we get a failed respsonse the user will stay at the same page with the selected profile and is notified to try again.
