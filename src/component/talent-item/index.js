@@ -44,7 +44,7 @@ class TalentItem extends React.Component {
       'React Native': `${__AWS_S3_BUCKET__}/react-native.png`,
       'HTML and CSS': `${__AWS_S3_BUCKET__}/html5-css3_icon.jpg`,
       'SQL': `${__AWS_S3_BUCKET__}/sql.png`,
-      'Relational Database Design': '',
+      'Relational Database Design': `${__AWS_S3_BUCKET__}/RDD.jpg`,
       'Dev-Ops': `${__AWS_S3_BUCKET__}/devops.jpg`,
       'C or C++': `${__AWS_S3_BUCKET__}/c%2B%2B.png`,
       'Shell Scripting (e.g. BASH)': `${__AWS_S3_BUCKET__}/bash.png`,
@@ -60,7 +60,6 @@ class TalentItem extends React.Component {
       'Vim': `${__AWS_S3_BUCKET__}/vim.jpg`,
       'Emacs': `${__AWS_S3_BUCKET__}/Emacs-icon.png`,
       'Test Automation': `${__AWS_S3_BUCKET__}/automatedtesting.png`,
-
     };
 
     let imageOrText = (key) => imageAssign[key] ? <img className="talent-icon" src={imageAssign[key]}/> : <span>{imageAssign[key]}</span>;
