@@ -6,6 +6,7 @@
   padding-bottom: .5%;
 }
 
+
 .talent-item h5{
   margin-top: 5%;
   border-top: 1px solid gray;
@@ -16,4 +17,13 @@
 .talent-icon{
   max-width: 5%;
   max-height: 5%;
+  margin-right: 2%;
+}
+
+div .bold p{
+  font-weight: bold;
+}
+
+#nickname{
+  font-weight: bolder;
 }

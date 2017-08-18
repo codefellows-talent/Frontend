@@ -47,6 +47,8 @@ class LandingContainer extends React.Component{
           <img className='landing-hero2' src='https://s3.amazonaws.com/codefellows-hiring-partners/Screen+Shot+2017-08-14+at+11.27.09+PM.png'/>
           <div id="take-a-look">
             <h2 id="grad-explination">Take a Look</h2>
+            <br></br>
+            <br></br>
             <h6 id="grad-explination-text">
               Resume bias is a well documented occurrence. It refers to the prejudice for or against a candidates resume based on characteristics inferred from the document. These characteristics might include the candidates name, age, gender, interests, ethnicity, social status, appearance, or any other characteristic a hiring professional might derive an inference from unintentionally.
 
