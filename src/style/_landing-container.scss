@@ -1,7 +1,12 @@
 @import "./_vars.scss";
 
 
-
+h1{
+  font-size: 6em;
+}
+h6{
+  font-size: 2em;
+}
 //Landing hero 1
 .landing-hero{
   margin-top: 10vh;
@@ -10,12 +15,10 @@
   filter: brightness(.25);
   position: relative;
 }
-h1{
-  font-size: 5em;
-}
+
 
 #grad-hiring{
-  color: $Buttons;
+  color: $color-white;
   font-family: $font-title;
   position: absolute;
   text-align: center;
@@ -62,18 +65,18 @@ h1{
   // position: absolute;
   text-align: left;
   font-size: calc(1em * 1.1);
-  top: 105vh;
+  top: 115vh;
   left: 0;
   width: 80%;
   margin-left: 10%;
 }
 .landing-talent-button {
   color: $color-white;
-  // position: absolute;
   margin-left: 45%;
-
-  width: 100%;
-  top: 115vh;
+  top: 30;
+  width: 10%;
+  top: 25vh;
+  position: absolute;
   text-align: center;
   background-color: $Buttons;
   padding: $pad;
@@ -167,7 +170,7 @@ h1{
     }
 
     #grad-hiring{
-      color: $Buttons;
+      color: $color-white;
       font-family: $font-title;
       font-size: 1.2em;
       position: absolute;
@@ -194,7 +197,7 @@ h1{
     .landing-hero2{
       margin-top: 7%;
       width: 100vw;
-      height: 28vh;
+      height: 34vh;
       filter: brightness(.4);
       position: relative;
     }
@@ -205,7 +208,7 @@ h1{
       font-family: $font-title;
       font-size: 1.2em;
       text-align: center;
-      top: 68vh;
+      margin-top: -10%;
       left: 0;
       width: 100%;
       z-index: 100;
@@ -216,7 +219,7 @@ h1{
       font-family: $font-title;
       font-size: 0.4em;
       text-align: left;
-      top: 73vh;
+      margin-top: -10%;
       left: 0;
       width: 80%;
       z-index: 100;
@@ -224,9 +227,9 @@ h1{
     }
     .landing-talent-button {
       color: $color-white;
-      width: 100%;
+      width: 10%;
       margin-left: 45%;
-      top: 88vh;
+      top: 23vh;
       text-align: center;
       font-size: .08em;
       background-color: $Buttons;
