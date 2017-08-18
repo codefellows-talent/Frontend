@@ -13,7 +13,6 @@ class ConnectForm extends React.Component {
     super(props);
     let selected = [];
     props.profiles.forEach(profile => profile.selected ? selected.push(profile.salesforceId) : null);
-
     this.state = {
       name: '',
       email: '',
@@ -45,7 +44,6 @@ class ConnectForm extends React.Component {
     }
     else
       this.setState({ [event.target.name]: event.target.value });
-
   }
 
   handleSubmit(event) {
@@ -63,13 +61,11 @@ class ConnectForm extends React.Component {
         let localStorageIds = [];
         if (localStorageJSON)
           localStorageIds = localStorageJSON.ids;
-        console.log(localStorageIds.concat(this.state.ids));
         this.setState({ 
           ids: localStorageIds.concat(this.state.ids),
           successfullyConnected: true,
           connectAttempt: this.state.connectAttempt++,
         });
-
         localStorage.setItem('contacted', JSON.stringify(this.state));
         this.props.profiles.forEach(profile => {
           if (this.state.ids.includes(profile.salesforceId)) {

@@ -29,5 +29,8 @@ export const profilesFetchRequest = () => (dispatch) => {
     .then((res) => {
       dispatch(profileSet(res.body));
       return res;
+    })
+    .catch(err => {
+      return new Error('Cant reach Server');
     });
 };

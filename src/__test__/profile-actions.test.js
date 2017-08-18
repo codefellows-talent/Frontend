@@ -1,5 +1,3 @@
-import superagent from 'superagent';
-import superagentMocker from 'superagent-mocker';
 import * as profileActions from '../action/profile-actions.js';
 import expect from 'expect';
 import mockProfile from './lib/mock-profile.js';
@@ -21,5 +19,15 @@ describe('testing profile actions', () => {
       }
     );
   });
+
+  it('fetch response profiles', () => {
+    window.fetch = jest.fn().mockImplementation(() =>
+      Promise.resolve(mockResponse(200, null, [mockProfile])));
+
+    let res = profileActions.profilesFetchRequest()();
+    
+    expect(res).toExist();
+  });
+
 
 });
