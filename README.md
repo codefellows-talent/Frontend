@@ -27,7 +27,7 @@ The current version allows for parsing of CSV data on the backend, randomizing t
 
 ### Dataflow Schema
 
-![hired.codefellows-dataflow](readme-assets/hired-codefellows-dataflow.jpg)
+![hired.codefellows-dataflow](readme-assets/hired-codefellows-dataflow.png)
 
 ### Google Form to Populate CSV
 
@@ -58,7 +58,7 @@ To navigate to '/connect', the user must first go to the '/talent' page and sele
 
 
 ### Code at '/connect'
-The connect page utilizes list-talent component to rendered the selected profiles as well as the ReactModal component to render the terms of use. The form values are updated in the component state. After hitting send, a call to the backend route '/api/v1/connect' is made. The email, ids, name, terms and company are sent to as part of the body. 
+The connect page utilizes list-talent component to rendered the selected profiles as well as the ReactModal component to render the terms of use. The form values are updated in the component state. After hitting send, a call to the backend route '/api/v1/connect' is made. The email, ids, name, terms and company are sent to as part of the body.
 
 If we get a successful response from the backend, the ids are then stored on local storage in local storage so that on the when user goes to the talent page again, the contacted profiles will not show up.
 
