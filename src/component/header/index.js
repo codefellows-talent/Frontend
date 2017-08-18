@@ -10,8 +10,8 @@ class Header extends React.Component{
             <container>
               <img  id="logo" src='https://s3.amazonaws.com/401-hire-cf/cf-logo-horizontal-2-color-white.png'/>
               <ul>
-                <li><Link to='/'>Home</Link> </li>
-                <li><Link to='/talents'>Talent</Link> </li>
+                <li><Link className='nav-a' to='/'>Home</Link> </li>
+                <li><Link className='nav-a' to='/talents'>Talent</Link> </li>
               </ul>
             </container>
           </nav>
