@@ -1,5 +1,4 @@
 import superagent from 'superagent';
-import shuffle from 'knuth-shuffle';
 
 export const profileSet = (profiles) => {
   let localStorageJSON = JSON.parse(localStorage.getItem('contacted'));

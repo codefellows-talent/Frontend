@@ -11,10 +11,14 @@
       "__DEBUG__": true,
       "__API_URL__": "http://localhost:7777",
       "__AWS_S3_BUCKET__": "https://s3fakeness/"
-    }
+    },
+    "setupFiles": [
+      "jest-localstorage-mock"
+    ]
   },
   "scripts": {
     "test": "jest --coverage",
+    "test-watch": "jest --watchAll",
     "lint": "eslint .",
     "build": "webpack",
     "start": "node index.js",
@@ -63,6 +67,7 @@
   },
   "devDependencies": {
     "faker": "^4.1.0",
+    "jest-localstorage-mock": "^1.2.0",
     "superagent-mocker": "^0.5.2"
   }
 }
