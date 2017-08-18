@@ -1,3 +1,5 @@
+import '../../style/_app.scss';
+
 import React from 'react';
 
 
