@@ -24,6 +24,6 @@ describe('testing category reducer', () => {
     fakeState = [mockProfile];
     
     result = profileReducer(fakeState, { type: 'PROFILE_UPDATE', payload: mockProfile2 });
-    expect(result).toEqual([mockProfile2])
+    expect(result).toEqual([mockProfile2]);
   });
 });
