@@ -27,7 +27,7 @@ The current version allows for parsing of CSV data on the backend, randomizing t
 
 ### Dataflow Schema
 
-![hired.codefellows-dataflow](readme-assets/hired-codefellows-dataflow.jpg)
+![hired.codefellows-dataflow](readme-assets/hired-codefellows-dataflow.png)
 
 ### Google Form to Populate CSV
 
