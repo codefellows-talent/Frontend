@@ -72,7 +72,7 @@ class TalentItem extends React.Component {
     };
 
     let showOrHideImage = (data = '', context, att = '') => {
-      if(data.length) return <p className={att}>{context} {mapImageOrText(data)}</p>;
+      if(data.length) return <div><p className={att}>{context}</p> <p>{mapImageOrText(data)}</p></div>;
     };
 
     return (
@@ -99,7 +99,7 @@ class TalentItem extends React.Component {
         {showOrHideImage(profile.tools.learn, 'Tools Interested in Learning: ', 'icon')}
 
 
-        <button className="add-button" onClick={() => this.handleUpdateSelected(profile)}>
+        <button className={profile.selected ? 'remove-button' : 'add-button'} onClick={() => this.handleUpdateSelected(profile)}>
           {profile.selected ? 'Remove' : 'Add'}
         </button>
       </div>
