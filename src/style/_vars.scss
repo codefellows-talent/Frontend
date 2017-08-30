@@ -24,21 +24,13 @@ $Buttons: #b62f20; //codefellows red
 $font-title: gotham-rounded;
 $font-p: Helvetica;
 
-
-
 //FONT SIZE VARIABLES
-$h1: 4em;
-$h2: 1.2em;
+
 $p: 1em;
-
-
-
-//H1 size 4em
-// H2 size 1.2 em
-// p 1.2 em
-
-
-
-
-
 $pad: 0.5em;
+
+//Z-index
+$above-all: 5;
+$above-background: 3;
+$below-background: -3;
+$behind-all: -5;

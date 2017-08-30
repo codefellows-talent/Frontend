@@ -1,0 +1,12 @@
+@import "./_vars.scss";
+
+.footer {
+  height: 4em;
+  margin-top: 1em;
+  p{
+    color: $color-gray;
+    font-family: $font-title;
+    font-size: 0.8em;
+    text-align: center;
+  }
+}
