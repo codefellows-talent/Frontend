@@ -5,104 +5,6 @@ body {
   position: relative;
   display: block;
 }
-h1{
-  font-size: 7em;
-}
-h6{
-  font-size: 4em;
-}
-
-//nav----------------------
-header img {
-  margin-top: 1%;
-  margin-left: 15%;
-  max-width: 16%;
-  display: inline;
-}
-.nav-a{
-  position: absolute;
-  margin-left: 25%;
-  margin-top: 2.3%;
-}
-a{
-  text-decoration: none;
-  list-style-type: none;
-  color: $color-white;
-  font-family: $font-title;
-  margin-left: 10%;
-}
-nav li {
-  line-height: 20px;
-  display: inline;
-  margin-left: 15%;
-
-}
-nav ul{
-  margin-left: -5%;
-  margin-top: 4%;
-  display: inline;
-}
-nav{
-  position: fixed;
-  z-index: 100;
-  background: $color-black;
-  height: 10%;
-  display: inline;
-}
-
-@media only screen and (max-width: 300px) {
-  header img {
-    margin-top: 2%;
-    margin-left: 15%;
-    display: inline;
-    width: 50%;
-    height: auto;
-  }
-  a{
-    text-decoration: none;
-    list-style-type: none;
-    color: $color-white;
-    font-family: $font-title;
-
-  }
-  nav li {
-    line-height: 15px;
-    display: inline;
-    margin-left: 15%;
-    font-size: 0.8em;
-  }
-  nav ul{
-    float: left;
-    position: absolute;
-    margin-left: -5%;
-    margin-top: 3.3%;
-  }
-  nav{
-    position: fixed;
-    z-index: 999;
-    background: $color-black;
-    height: 7%;
-    display: inline;
-  }
-}
-//------------------------------------------
-
-
-
-//FOOTER CSS------------------------
-.footer p{
-  color: grey;
-  font-family: $font-title;
-  font-size: 0.1em;
-  text-align: center;
-}
-
-
-
-//----------------------------------
-
-
-
 
 p {
   display: block;
@@ -127,9 +29,6 @@ em {
 strong {
   font-weight: 700;
 }
-
-
-
 
 button {
   border: 1px solid $color-black;

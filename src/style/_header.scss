@@ -1,0 +1,117 @@
+@import "./_vars.scss";
+
+nav {
+  float: left;
+  position: fixed;
+  z-index: $above-all;
+  background: $color-black;
+  height: auto;
+  display: inline;
+  padding: $pad $pad;
+
+  container {
+    width: 50%;
+    img {
+      float: left;
+      display: inline;
+      top: 50%;
+      width: 50%;
+      height: auto;
+      max-width: 307.5px;
+      max-height: 60px;
+      vertical-align: middle;
+    }
+  }
+
+  div {
+    float: right;
+    margin: 0 5%;
+    width: 40%;
+    display: inline;
+    height: 2.5em;
+    @media only screen and (min-width: 420px) {
+    height: 3.5em;
+    }
+    @media only screen and (min-width: 760px) {
+    height: 4em;
+    }
+    ul {
+      float: left;
+      display: inline;
+      padding: 0;
+      line-height: 2.5em;
+      @media only screen and (min-width: 420px) {
+      line-height: 3.5em;
+      }
+      @media only screen and (min-width: 760px) {
+      line-height: 4em;
+      }
+    }
+
+    li {
+      width: 50%;
+      text-align: center;
+      float: left;
+      display: inline;
+      height: 2em;
+      @media only screen and (min-width: 420px) {
+        font-size: 1.25em;
+      }
+      @media only screen and (min-width: 760px) {
+        font-size: 1.5em;
+      }
+      a {
+        display: inline;
+        text-decoration: none;
+        list-style-type: none;
+        color: $color-white;
+        font-family: $font-title;
+      }
+    }
+  }
+}
+
+
+
+
+
+// //nav----------------------
+// header img {
+//   margin-top: 1%;
+//   margin-left: 15%;
+//   max-width: 16%;
+//   display: inline;
+// }
+// .nav-a{
+//   position: absolute;
+//   margin-left: 25%;
+//   margin-top: 2.3%;
+// }
+// a{
+//   text-decoration: none;
+//   list-style-type: none;
+//   color: $color-white;
+//   font-family: $font-title;
+//   margin-left: 10%;
+// }
+// nav li {
+//   line-height: 20px;
+//   display: inline;
+//   margin-left: 15%;
+//
+// }
+// nav ul{
+//   margin-left: -5%;
+//   margin-top: 4%;
+//   display: inline;
+// }
+// nav{
+//   position: fixed;
+//   z-index: 100;
+//   background: $color-black;
+//   height: 10%;
+//   display: inline;
+// }
+//
+
+// //------------------------------------------
