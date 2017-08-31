@@ -25,7 +25,7 @@ body{
 #connect{
   position: absolute;
   margin-top: 14%;
-  z-index: 90;
+  z-index: $above-background;
   color: $color-white;
   font-family: $font-title;
   text-align: center;
@@ -106,7 +106,7 @@ img .talent-icon{
   #connect{
     position: absolute;
     margin-top: 35%;
-    z-index: 90;
+    z-index: $above-background;
     color: $color-white;
     font-family: $font-title;
     text-align: center;

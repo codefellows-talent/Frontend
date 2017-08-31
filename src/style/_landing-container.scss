@@ -8,8 +8,8 @@
   height: auto;
   max-width: 100%;
 }
-.hero-image {
 
+.hero-image {
   height: auto;
   max-width: 100%;
   filter: brightness(.25);
@@ -22,6 +22,7 @@
     margin-top: 5em;
   }
 }
+
 .hero-text {
   top: 2em;
   padding: 10% 5%;
@@ -35,24 +36,51 @@
   }
 }
 
-.student-container {
-  margin-top: 4%;
-  margin-bottom: -4%;
+.students {
+  margin-top: 2%;
   max-width: 100%;
+  text-align: center;
+  color: $color-black;
 }
 
-.item{
-  text-align: center;
-  display: inline-block;
-  max-width: 20%;
-  vertical-align: middle;
-  text-color: $color-black;
+.student-container {
   position: relative;
-  // margin-left: 2.5vw;
-  // margin-right: 2.5vw;
-  // margin-top: 3vh;
-  // margin-bottom: 2vh;
-  color: $color-black;
+  max-width: 20%;
+  margin: 0 2.5%;
+  float: left;
+  p {
+    margin-top: 5%;
+    font-size: .8em;
+    word-wrap: normal;
+    font-style: italic;
+    font-family: arial;
+    @media only screen and (min-width: 960px) {
+      font-size: 1.2em;
+    }
+    span {
+      display: none;
+      @media only screen and (min-width: 420px) {
+      display: inline;
+      }
+    }
+  }
+  h5 {
+    font-weight: 600;
+    margin-top: 5%;
+    font-size: .8em;
+    font-family: $font-title;
+    @media only screen and (min-width: 960px) {
+      font-size: 1.2em;
+    }
+  }
+  h6{
+    color: $color-gray;
+    margin-top: 3%;
+    font-size: .8em;
+    @media only screen and (min-width: 960px) {
+      font-size: 1.2em;
+    }
+  }
 }
 
 .grad-pics {
@@ -61,226 +89,43 @@
   height: 100%;
 }
 
+.hero-bottom-image {
+  height: auto;
+  max-width: 120%;
+  filter: brightness(.25);
+  position: relative;
+  margin-top: 2%;
+  @media only screen and (min-width: 420px) {
 
-// //LANDING STATEMENT
-// .landing-statement{
-//   background: $color-white;
-//   display: block;
-//   font-family: Helvetica;
-// }
-//
-//
-//
-//
-// //-------------------------------
-//
-// //LANDING STUDENT graduate-image
-//
+  }
+  @media only screen and (min-width: 760px) {
 
-//
-// // .grad-text{
-// //   font-size: .2em;
-// //   color: grey;
-// //   text-align: center;
-// //   font-style: italic;
-// //   width: 20%;
-// // }
-//
-
-//
-// .item p {
-//   margin-top: 7%;
-//   font-size: .8em;
-//   word-wrap: normal;
-//   font-style: italic;
-//   font-family: arial;
-// }
-//
-// .item h5 {
-//   margin-top: 2%;
-//   font-size: .8em;
-//   font-family: $font-title;
-// }
-//
-// .item h6{
-//   color: gray;
-//   margin-top: 1%;
-//   font-size: .6em;
-// }
-// //----------------------------------
-
-
-@media only screen and (max-width: 500px) {
-
-  // h1{
-  //   font-size: 5em;
-  // }
-  //
-  //
-  // #take-a-look{
-  //   width: 100%;
-  //   transform: translateY(-145px);
-  // }
-
-  // Landing hero 1
-  // .landing-hero{
-  //   margin-top: 10vh;
-  //   width: 100vw;
-  //   height: 48vh;
-  //   filter: brightness(.4);
-  //   position: relative;
-  // }
-
-    // #grad-hiring{
-    //   color: $color-white;
-    //   font-family: $font-title;
-    //   font-size: 1.2em;
-    //   position: absolute;
-    //   text-align: center;
-    //   top: 16vh;
-    //   left: 0;
-    //   width: 100%;
-    //   z-index: 99;
-    //   text-align: center;
-    // }
-    // #grad-hiring-info{
-    //   color: $color-white;
-    //   font-family: $font-title;
-    //   font-size: 0.8em;
-    //   position: absolute;
-    //   text-align: center;
-    //   top: 20vh;
-    //   left: 0;
-    //   width: 100%;
-    //   z-index: 99;
-    // }
-    // //-------------------------------------------
-    // //Landing hero 2
-    // .landing-hero2{
-    //   margin-top: 7%;
-    //   width: 100vw;
-    //   height: 34vh;
-    //   filter: brightness(.4);
-    //   position: relative;
-    // }
-    //
-    //
-    // #grad-explination{
-    //   color: $color-white;
-    //   font-family: $font-title;
-    //   font-size: 1.2em;
-    //   text-align: center;
-    //   margin-top: -10%;
-    //   left: 0;
-    //   width: 100%;
-    //   z-index: 100;
-    //   text-align: center;
-    // }
-    // #grad-explination-text{
-    //   color: $color-white;
-    //   font-family: $font-title;
-    //   font-size: 0.4em;
-    //   text-align: left;
-    //   margin-top: -10%;
-    //   left: 0;
-    //   width: 80%;
-    //   z-index: 100;
-    //
-    // }
-    // .landing-talent-button {
-    //   color: $color-white;
-    //   width: 10%;
-    //   margin-left: 45%;
-    //   top: 23vh;
-    //   text-align: center;
-    //   font-size: .08em;
-    //   background-color: $Buttons;
-    //   padding: $pad;
-    //   border-radius: 30px;
-    // }
-    // //-------------------------------------------
-
-    // .item{
-    //   text-align: center;
-    //   display: inline-block;
-    //   max-width: 20%;
-    //   vertical-align: middle;
-    //   text-color: $color-black;
-    //   position: relative;
-    //   margin-left: 2.5vw;
-    //   margin-right: 2.5vw;
-    //   margin-top: 3vh;
-    //   margin-bottom: 2vh;
-    //   color: $color-black;
-    // }
-    //
-    // .item p {
-    //   margin-top: 7%;
-    //   font-size: .3em;
-    //   word-wrap: normal;
-    //   font-style: italic;
-    //   font-family: arial;
-    // }
-    //
-    // .item h5 {
-    //   margin-top: 2%;
-    //   font-size: .3em;
-    //   font-family: $font-title;
-    // }
-    //
-    // .item h6{
-    //   color: gray;
-    //   margin-top: 1%;
-    //   font-size: .2em;
-    // }
-
+  }
+}
+.hero-bottom-background {
+  position: relative;
+  background-image: url(https://s3.amazonaws.com/codefellows-hiring-partners/Screen+Shot+2017-08-14+at+11.27.09+PM.png);
+  background-size: auto 100%;
+  background-repeat: repeat-y;
+}
+.hero-bottom-text {
+  background: black;
+  opacity: 0.80;
+  color: $color-white;
+  font-family: $font-title;
+  padding: 5% 5%;
+  h6 {
+    text-align: left;
+    padding: 2.5% 0;
+  }
 }
 
-//-------------------------------------------
-
-// //Landing hero 2
-// .landing-hero2{
-//   margin-top: 2%;
-//   width: 100vw;
-//   height: 40vh;
-//   filter: brightness(.25);
-//   position: relative;
-// }
-// #take-a-look{
-//   width: 100%;
-//   transform: translateY(-300px);
-// }
-// #grad-explination{
-//   color: $color-white;
-//   font-family: $font-title;
-//   // position: absolute;
-//   text-align: center;
-//   top: 100vh;
-//   left: 0;
-//   width: 100vw;
-// }
-//
-// #grad-explination-text{
-//   color: $color-white;
-//   font-family: $font-title;
-//   // position: absolute;
-//   text-align: left;
-//   font-size: calc(1em * 1.1);
-//   top: 115vh;
-//   left: 0;
-//   width: 80%;
-//   margin-left: 10%;
-// }
-// .landing-talent-button {
-//   color: $color-white;
-//   margin-left: 45%;
-//   top: 30;
-//   width: 10%;
-//   top: 25vh;
-//   position: absolute;
-//   text-align: center;
-//   background-color: $Buttons;
-//   padding: $pad;
-//   border-radius: 30px;
-// }
-//-------------------------------------------
+.landing-talent-button {
+  color: $color-white;
+  margin: 2.5% 35%;
+  width: 10%;
+  text-align: center;
+  background-color: $Buttons;
+  padding: $pad;
+  border-radius: 30px;
+}
