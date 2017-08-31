@@ -61,7 +61,7 @@ class ConnectForm extends React.Component {
         let localStorageIds = [];
         if (localStorageJSON)
           localStorageIds = localStorageJSON.ids;
-        this.setState({ 
+        this.setState({
           ids: localStorageIds.concat(this.state.ids),
           successfullyConnected: true,
           connectAttempt: this.state.connectAttempt++,
@@ -129,7 +129,7 @@ class ConnectForm extends React.Component {
               name='terms'
               type='checkbox'
               required
-              oninvalid='this.setCustomValidity("You need to agreee to the Terms of Use");'
+              onInvalid='this.setCustomValidity("You need to agreee to the Terms of Use");'
               value={this.state.terms}
               onChange={this.handleChange}
             /> <p id="checkbox-text" onClick={this.openModal}>Terms of Use</p>

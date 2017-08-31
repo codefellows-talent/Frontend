@@ -3,7 +3,7 @@
 #the-talent{
   position: absolute;
   margin-top: 14%;
-  z-index: 90;
+  z-index: $above-background;
   color: $color-white;
   font-family: $font-title;
   text-align: center;
@@ -35,7 +35,7 @@ div.list-talents{
   width: 10%;
   background-color: $color-white;
   float: right;
-  z-index: 299;
+  z-index: $above-background;
   position: fixed;
   text-align: center;
 }
@@ -80,7 +80,7 @@ button{
     width: 5%;
     background-color: $color-white;
     float: right;
-    z-index: 299;
+    z-index: $above-background;
     position: fixed;
   }
   .connect-me-button{
@@ -97,7 +97,7 @@ button{
   #the-talent{
     position: absolute;
     margin-top: 35%;
-    z-index: 90;
+    z-index: $above-background;
     color: $color-white;
     font-family: $font-title;
     text-align: center;
