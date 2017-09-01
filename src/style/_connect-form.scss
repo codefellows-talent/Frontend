@@ -1,40 +1,22 @@
 @import "./_vars.scss";
 
-.modal-header{
-  margin-top: 19%;
-  text-align: center;
-  margin-bottom: 3%;
+.contact-form-header {
+  text-align: left;
+  margin: $pad 5%;
 }
-.modal-content{
-  padding-left: 15%;
-  padding-right: 15%;
-  padding-bottom: 5%;
-}
-.close-button{
-  width: 70%;
-  margin-left: -55%;
+
+.contact-form-response {
   text-align: center;
-}
-#connect{
-  position: absolute;
-  margin-top: 14%;
-  z-index: $above-background;
-  color: $color-white;
-  font-family: $font-title;
-  text-align: center;
+  margin: $pad 0;
+  max-height: 100%;
+  padding: 0 $pad;
 }
 .connect-form{
   display: inline-block;
   margin-top: 3%;
   padding-bottom: 1%;
 }
-.landing-hero-4{
-  margin-top: 10vh;
-  width: 100%;
-  height: 48vh;
-  filter: brightness(.25);
-  position: relative;
-}
+
 form{
   display: inline-block;
   margin-top: 12vh;
@@ -44,62 +26,72 @@ form{
   border: 1px solid lightgrey;
   padding: 10px;
 }
-.connect-button-submit{
-  margin-left: -2%;
-  margin-top: 6%;
-}
-#checkbox{
-  width: 5%;
-  float: left;
-}
-#checkbox-text{
-  color: $color-black;
-  float: left;
-  width: 25%;
-}
-.connect-container h3, .connect-container h5, .connect-container span, .connect-container p{
-  width: 80%;
-  margin-left: 10%;
-}
-.skill-tool-icon {
-  display: inline;
-}
-.skill-tool-icon-container{
-  padding-left: 10%;
-  width: 80%;
-}
-img .talent-icon{
-  display: inline;
 
-}
-.contact-form-header{
-  text-align: center;
-  padding-top: 2%;
-  font-size: 3em;
-}
-.skill-tool-icon p{
+.checkbox-container {
   display: inline;
-}
-
-@media only screen and (max-width: 500px) {
-
-  .connect-form{
-    display: inline-block;
-    margin-top: 5%;
+  .checkbox{
+    width: 5%;
   }
-  .landing-hero-4{
-    margin-top: 10vh;
-    width: 100%;
-    height: 30vh;
-    filter: brightness(.25);
-    position: relative;
+  .checkbox-text{
+    color: $color-black;;
   }
-  #connect{
-    position: absolute;
-    margin-top: 35%;
-    z-index: $above-background;
+}
+
+.connect-form {
+  margin-top: 0;
+  button {
     color: $color-white;
-    font-family: $font-title;
+    width: 50%;
     text-align: center;
+    background-color: $Buttons;
+    padding: $pad;
+    margin: $pad 25%;
+    border-radius: 30px;
   }
+}
+
+.terms-modal {
+  text-align: center;
+  background: white;
+  margin-top: 4.5em;
+  @media only screen and (min-width: 420px) {
+    margin-top: 5.5em;
+  }
+  @media only screen and (min-width: 760px) {
+    margin-top: 6em;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 80%;
+  padding: $pad;
+  margin-top: 4.5em;
+  @media only screen and (min-width: 420px) {
+    margin-top: 5.5em;
+  }
+  @media only screen and (min-width: 760px) {
+    margin-top: 4em;
+  }
+  button {
+    color: $color-white;
+    width: 50%;
+    text-align: center;
+    background-color: $Buttons;
+    padding: $pad;
+    margin: $pad 25%;
+    border-radius: 30px;
+  }
+}
+.modal-header{
+  text-align: center;
+  padding: $pad;
+}
+.modal-content{
+  text-align: left;
+  padding: $pad;
 }
