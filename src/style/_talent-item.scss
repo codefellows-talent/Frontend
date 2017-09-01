@@ -21,7 +21,7 @@
 }
 
 .talent-item-header{
-  margin: $pad 0;
+  margin: $pad 0 0 0;
   border-top: 1px solid $color-lightgray;
   padding-top: $pad;
   font-weight: bold;
@@ -39,7 +39,15 @@
 }
 
 .skills-icon{
-  max-width: 5%;
-  max-height: 5%;
-  margin-right: 2%;
+  width: 2em;
+  height: 2em;
+  margin: 0 0 $pad $pad;
+  @media only screen and (min-width: 420px) {
+    width: 2.5em;
+    height: 2.5em;
+  }
+  @media only screen and (min-width: 760px) {
+    width: 3em;
+    height: 3em;
+  }
 }
