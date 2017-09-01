@@ -36,10 +36,10 @@ class ListTalents extends React.Component {
           <div className='hero-text'>
             <h1>The Talent</h1>
           </div>
-          <div className='connect-container'>
-            <p>Profiles Selected: {this.handleCountSelected(this.props.profiles)}</p>
-            <Link to='/connect' className='connect-button'>Connect Me!</Link>
-          </div>
+        </div>
+        <div className='connect-container'>
+          <p>Profiles Selected: {this.handleCountSelected(this.props.profiles)}</p>
+          <Link to='/connect' className='connect-button'>Connect Me!</Link>
         </div>
         <div className="list-talents">
           {this.props.profiles.map(studentProfile => {

@@ -40,10 +40,17 @@ div.list-talents{
   z-index: $above-background;
   padding: $pad;
   padding-bottom: 1em;
-  position: relative;
+  position: sticky;
   text-align: center;
   border: 1px solid black;
   border-radius: 5%;
+  top: 3.25em;
+  @media only screen and (min-width: 420px) {
+  top: 4.25em;
+  }
+  @media only screen and (min-width: 760px) {
+  top: 4.75em;
+  }
   p {
     margin-bottom: 1em;
   }
