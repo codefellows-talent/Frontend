@@ -62,9 +62,9 @@ class TalentItem extends React.Component {
       'Test Automation': `${__AWS_S3_BUCKET__}/automatedtesting.png`,
     };
 
-    let imageOrText = (key) => imageAssign[key] ? <img className="talent-icon" src={imageAssign[key]}/> : <span>{imageAssign[key]}</span>;
+    let imageOrText = (key) => imageAssign[key] ? <img className="skills-icon" src={imageAssign[key]}/> : <span>{imageAssign[key]}</span>;
 
-    let mapImageOrText = (objectKey) => objectKey.map((item, i) => imageAssign[item] ? <img className="talent-icon" key={i} src={imageAssign[item]}/> : <span key={i}>{item}</span>);
+    let mapImageOrText = (objectKey) => objectKey.map((item, i) => imageAssign[item] ? <img className="skills-icon" key={i} src={imageAssign[item]}/> : <span key={i}>{item}</span>);
 
     let showOrHideText = (data = '', context = '') => {
       if(data.length) return `${context}${data}`;

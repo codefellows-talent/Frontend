@@ -12,17 +12,12 @@ $color-lightgray: #B5BAC3;
 $color-gray: #52555B;
 $color-darkgray: #6E7177;
 $Buttons: #b62f20; //codefellows red
-
+$font: arial;
 
 
 //FONT VARIABLES
-@font-face {
-  font-family: gotham-rounded;
-  src: url('./src/style/assets/font/Gotham-Rounded/GothamRounded-Book.ttf');
-}
 
 $font-title: gotham-rounded;
-$font-p: Helvetica;
 
 //FONT SIZE VARIABLES
 

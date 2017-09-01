@@ -84,9 +84,13 @@ class ConnectForm extends React.Component {
 
   render() {
     return (
-      <div className="connect-container">
-        <h1 id='connect'>Connect</h1>
-        <img className='landing-hero-4' src='https://s3.amazonaws.com/codefellows-hiring-partners/freddy-castro-133328.jpg' />
+      <div>
+        <div className='hero-container'>
+          <img className='hero-image' src='https://s3.amazonaws.com/codefellows-hiring-partners/freddy-castro-133328.jpg' />
+          <div className='hero-text'>
+            <h1>Connect</h1>
+          </div>
+        </div>
         {
           (() => {
             if(!this.state.successfullyConnected && this.state.connectAttempt === 0)

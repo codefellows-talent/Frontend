@@ -1,8 +1,5 @@
 @import "./_vars.scss";
 
-body{
-  background: $color-white;
-}
 .talent-item h5{
   font-weight: bold;
   font-size: 2em;
@@ -89,9 +86,7 @@ img .talent-icon{
 }
 
 @media only screen and (max-width: 500px) {
-  .list-talents{
-    margin-top: 15%;
-  }
+
   .connect-form{
     display: inline-block;
     margin-top: 5%;

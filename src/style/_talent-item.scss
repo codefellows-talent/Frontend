@@ -1,38 +1,43 @@
 @import "./_vars.scss";
 
-.talent-item p{
-  color: $color-black;
-  padding-top: .5%;
-  padding-bottom: .5%;
+.talent-item {
+  p{
+    color: $color-black;
+    padding: $pad 0;
+  }
+  h5{
+    margin-top: 5%;
+    border-top: 1px solid gray;
+    padding-top: 2%;
+    padding-bottom: 1%;
+  }
 }
 
-
-.talent-item h5{
-  margin-top: 5%;
-  border-top: 1px solid gray;
-  padding-top: 2%;
-  padding-bottom: 1%;
+.add-button{
+  display: inline;
+  margin-left: -2%;
 }
 
-
-.talent-icon{
+.remove-button{
+  display: inline;
+  margin-left: -2%;
+  background-color: $color-success;
+}
+button{
+  color: $color-white;
+  position: absolute;
+  left: 70vw;
+  width: 20%;
+  text-align: center;
+  background-color: $Buttons;
+  padding: $pad;
+  border-radius: 30px;
+  padding: 5px;
+  font-size: .5em;
+  margin-top: 2%;
+}
+.skills-icon{
   max-width: 5%;
   max-height: 5%;
   margin-right: 2%;
-}
-
-div .bold p{
-  font-weight: bold;
-}
-
-#nickname{
-  font-weight: bolder;
-}
-
-.icon{
-  font-weight: bold;
-}
-.list-talents h5{
-  font-weight: bold;
-  font-size: 2em;
 }
