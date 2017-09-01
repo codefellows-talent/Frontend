@@ -1,4 +1,5 @@
 @import "./_vars.scss";
+@import "./_landing-container.scss";
 
 #the-talent{
   position: absolute;
@@ -24,20 +25,32 @@ div.list-talents{
   margin-left: 10%;
   padding: 10px;
 }
-.connect-me-button{
+.connect-button{
   color: $color-white;
   background-color: $Buttons;
   padding: $pad;
-  line-height: 40px;
   border-radius: 30px;
 }
-#connect-div{
-  width: 10%;
-  background-color: $color-white;
-  float: right;
+
+.connect-container{
+  max-height: 100%;
+  width: auto;
+  background: $color-white;
+  float: left;
   z-index: $above-background;
-  position: fixed;
+  padding: $pad;
+  padding-bottom: 1em;
+  position: relative;
   text-align: center;
+  border: 1px solid black;
+  border-radius: 5%;
+  p {
+    margin-bottom: 1em;
+  }
+}
+
+.stick {
+
 }
 
 p{

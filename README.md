@@ -3,6 +3,7 @@
 ## Deployed on Heroku
 
 https://hired-codefellows.herokuapp.com/
+
 (May take a few moments to re-spin up the heroku dynos for both the front-end and back-end)
 
 ## Unbiased Resumes to Identify Qualified Candidates [![Build Status](https://travis-ci.org/codefellows-talent/Frontend.svg?branch=master)](https://travis-ci.org/codefellows-talent/Frontend)
