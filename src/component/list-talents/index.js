@@ -27,6 +27,10 @@ class ListTalents extends React.Component {
     this.props.fetchProfile();
   }
 
+  componentDidMount () {
+    window.scrollTo(0, 0);
+  }
+
   render () {
     let connectBox = document.getElementsByClassName('connect-container');
     return (
