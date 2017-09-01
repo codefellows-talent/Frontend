@@ -1,41 +1,43 @@
 @import "./_vars.scss";
 
 .talent-item {
-  p{
+  p {
     color: $color-black;
-    padding: $pad 0;
+    padding: $pad 0 0 0;
   }
-  h5{
-    margin-top: 5%;
-    border-top: 1px solid gray;
-    padding-top: 2%;
-    padding-bottom: 1%;
+  button {
+    color: $color-white;
+    width: 35%;
+    text-align: center;
+    background-color: $Buttons;
+    padding: $pad;
+    margin: $pad 0 0 65%;
+    border-radius: 30px;
+    @media only screen and (min-width: 420px) {
+    margin-left: 80%;
+    width: 20%;
+    }
   }
+}
+
+.talent-item-header{
+  margin: $pad 0;
+  border-top: 1px solid $color-lightgray;
+  padding-top: $pad;
+  font-weight: bold;
+}
+
+.talent-item-subheader {
+  font-weight: 600;
 }
 
 .add-button{
-  display: inline;
-  margin-left: -2%;
 }
 
 .remove-button{
-  display: inline;
-  margin-left: -2%;
   background-color: $color-success;
 }
-button{
-  color: $color-white;
-  position: absolute;
-  left: 70vw;
-  width: 20%;
-  text-align: center;
-  background-color: $Buttons;
-  padding: $pad;
-  border-radius: 30px;
-  padding: 5px;
-  font-size: .5em;
-  margin-top: 2%;
-}
+
 .skills-icon{
   max-width: 5%;
   max-height: 5%;

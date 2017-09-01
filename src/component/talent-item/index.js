@@ -67,7 +67,7 @@ class TalentItem extends React.Component {
     let mapImageOrText = (objectKey) => objectKey.map((item, i) => imageAssign[item] ? <img className="skills-icon" key={i} src={imageAssign[item]}/> : <span key={i}>{item}</span>);
 
     let showOrHideText = (data = '', context = '') => {
-      if(data.length) return `${context}${data}`;
+      if(data.length) return <div><p className='talent-item-subheader'>{context}</p>{data}</div>;
     };
 
     let showOrHideImage = (data = '', context, att = '') => {
@@ -76,28 +76,29 @@ class TalentItem extends React.Component {
 
     return (
       <div className='talent-item'>
-        <h5>{profile.nickname}</h5>
-        <p id='img1'>{imageOrText(profile.skills.top)}
-          {imageOrText(profile.tools.top)}</p>
-        <p>{showOrHideText(profile.tagline)}</p>
-        <p>{showOrHideText(profile.employer, 'Current Employer: ')}</p>
-        <p>{showOrHideText(profile.coursework, 'Coursework: ')}</p>
-        <p>{showOrHideText(profile.careerTagline, 'Background Experience: ')}</p>
-        <p>{showOrHideText(profile.location, 'Location: ')}</p>
-        <p>{showOrHideText(profile.graduationDate, 'Graduated: ')}</p>
-        <p>{showOrHideText(profile.codefellowsCourse, 'Graduated: ')}</p>
+        <h2 className='talent-item-header'>{profile.nickname}</h2>
+        <p>{imageOrText(profile.skills.top)} {imageOrText(profile.tools.top)}</p>
+        {showOrHideText(profile.tagline)}
+        {showOrHideText(profile.employer, 'Current Employer: ')}
+        {showOrHideText(profile.coursework, 'Coursework: ')}
+        {showOrHideText(profile.careerTagline, 'Background Experience: ')}
+        {showOrHideText(profile.location, 'Location: ')}
+        {showOrHideText(profile.graduationDate, 'Graduated: ')}
+        {showOrHideText(profile.codefellowsCourse, 'Graduated: ')}
         <p>{relocation}</p>
-        <p>Looking for: {fulltime}{parttime}{apprenticeship}{internship}{freelance}opportunities! </p>
-        <p className='icon'>Prefer a role In:</p>
-        <p>{profile.roles.top}</p>
-        <p className='icon'>Also Interested in Roles Involving:</p>
-        <p>{profile.roles.other.map((item) => `${item}  `)}</p>
-        {showOrHideImage(profile.skills.good, 'Additional Skill Experience: ', 'icon')}
-        {showOrHideImage(profile.skills.learn, 'Skills Interested in Learning: ', 'icon')}
-        {showOrHideImage(profile.tools.good, 'Additional Tool Experience: ', 'icon')}
-        {showOrHideImage(profile.tools.learn, 'Tools Interested in Learning: ', 'icon')}
-
-
+        <div>
+          <p className='talent-item-subheader'>Looking for: </p>
+          {fulltime}{parttime}{apprenticeship}{internship}{freelance}opportunities!
+        </div>
+        <div>
+          <p className='talent-item-subheader'>Prefer a role In:</p>
+          {profile.roles.top}
+        </div>
+        {showOrHideText(profile.roles.other, 'Also Interested In:')}
+        {showOrHideImage(profile.skills.good, 'Additional Skill Experience: ', 'talent-item-subheader')}
+        {showOrHideImage(profile.skills.learn, 'Skills Interested in Learning: ', 'talent-item-subheader')}
+        {showOrHideImage(profile.tools.good, 'Additional Tool Experience: ', 'talent-item-subheader')}
+        {showOrHideImage(profile.tools.learn, 'Tools Interested in Learning: ', 'talent-item-subheader')}
         <button className={profile.selected ? 'remove-button' : 'add-button'} onClick={() => this.handleUpdateSelected(profile)}>
           {profile.selected ? 'Remove' : 'Add'}
         </button>
