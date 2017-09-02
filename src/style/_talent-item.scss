@@ -1,38 +1,59 @@
 @import "./_vars.scss";
 
-.talent-item p{
-  color: $color-black;
-  padding-top: .5%;
-  padding-bottom: .5%;
+.list-talents{
+  margin: 0 5%;
+  width: 90%;
+  position: relative;
 }
 
-
-.talent-item h5{
-  margin-top: 5%;
-  border-top: 1px solid gray;
-  padding-top: 2%;
-  padding-bottom: 1%;
+.talent-item {
+  p {
+    color: $color-black;
+    padding: $pad 0 0 0;
+  }
+  button {
+    color: $color-white;
+    width: 35%;
+    text-align: center;
+    background-color: $Buttons;
+    padding: $pad;
+    margin: $pad 0 0 65%;
+    border-radius: 30px;
+    @media only screen and (min-width: 420px) {
+    margin-left: 80%;
+    width: 20%;
+    }
+  }
 }
 
-
-.talent-icon{
-  max-width: 5%;
-  max-height: 5%;
-  margin-right: 2%;
-}
-
-div .bold p{
+.talent-item-header{
+  margin: $pad 0 0 0;
+  border-top: 1px solid $color-lightgray;
+  padding-top: $pad;
   font-weight: bold;
 }
 
-#nickname{
-  font-weight: bolder;
+.talent-item-subheader {
+  font-weight: 600;
 }
 
-.icon{
-  font-weight: bold;
+.add-button{
 }
-.list-talents h5{
-  font-weight: bold;
-  font-size: 2em;
+
+.remove-button{
+  background-color: $color-success;
+}
+
+.skills-icon{
+  width: 2em;
+  height: 2em;
+  margin: 0 0 $pad $pad;
+  @media only screen and (min-width: 420px) {
+    width: 2.5em;
+    height: 2.5em;
+  }
+  @media only screen and (min-width: 760px) {
+    width: 3em;
+    height: 3em;
+  }
 }

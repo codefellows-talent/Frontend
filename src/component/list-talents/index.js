@@ -27,17 +27,25 @@ class ListTalents extends React.Component {
     this.props.fetchProfile();
   }
 
+  componentDidMount () {
+    window.scrollTo(0, 0);
+  }
+
   render () {
+    let connectBox = document.getElementsByClassName('connect-container');
     return (
       <div>
-        <h1 id='the-talent'>The Talent</h1>
-        <img className='landing-hero-3' src='https://s3.amazonaws.com/codefellows-hiring-partners/craig-garner-202.jpg'/>
-        <div id="connect-div">
+        <div className='hero-container'>
+          <img className='hero-image' src='https://s3.amazonaws.com/codefellows-hiring-partners/craig-garner-202.jpg'/>
+          <div className='hero-text'>
+            <h1>The Talent</h1>
+          </div>
+        </div>
+        <div className='connect-container'>
           <p>Profiles Selected: {this.handleCountSelected(this.props.profiles)}</p>
-          <Link to='/connect' className='connect-me-button'>Connect Me!</Link>
+          <Link to='/connect' className='connect-button'>Connect Me!</Link>
         </div>
         <div className="list-talents">
-
           {this.props.profiles.map(studentProfile => {
             return <TalentItem key={studentProfile.salesforceId} profile={studentProfile}/>;
           })}

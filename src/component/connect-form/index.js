@@ -82,19 +82,27 @@ class ConnectForm extends React.Component {
       });
   }
 
+  componentDidMount () {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
-      <div className="connect-container">
-        <h1 id='connect'>Connect</h1>
-        <img className='landing-hero-4' src='https://s3.amazonaws.com/codefellows-hiring-partners/freddy-castro-133328.jpg' />
+      <div className='connect-form'>
+        <div className='hero-container'>
+          <img className='hero-image' src='https://s3.amazonaws.com/codefellows-hiring-partners/freddy-castro-133328.jpg' />
+          <div className='hero-text'>
+            <h1>Connect</h1>
+          </div>
+        </div>
         {
           (() => {
             if(!this.state.successfullyConnected && this.state.connectAttempt === 0)
-              return <h3 className="contact-form-header">Contact Form:</h3>;
+              return <h3 className='contact-form-header'>Contact Form:</h3>;
             else if (this.state.successfullyConnected)
-              return <h3 className="contact-form-header">You have successfully connected to {this.state.ids.length} Graduates!</h3>;
+              return <h3 className='contact-form-response'>You have successfully connected to {this.state.ids.length} Graduates!</h3>;
             else if(!this.state.successfullyConnected && this.state.connectAttempt > 0)
-              return <h3 className="contact-form-header">Failed to connect. Please try again later</h3>;
+              return <h3 className='contact-form-response'>Failed to connect. Please try again later</h3>;
           })()
         }
         <form className='connect-form' onSubmit={this.handleSubmit} >
@@ -124,15 +132,15 @@ class ConnectForm extends React.Component {
             onChange={this.handleChange}
             placeholder='Company'
           />
-          <div>
-            <input id="checkbox"
+          <div className="checkbox-container">
+            <input className="checkbox"
               name='terms'
               type='checkbox'
               required
-              onInvalid='this.setCustomValidity("You need to agreee to the Terms of Use");'
               value={this.state.terms}
               onChange={this.handleChange}
-            /> <p id="checkbox-text" onClick={this.openModal}>Terms of Use</p>
+            />
+            <span className="checkbox-text" onClick={this.openModal}> Terms of Use</span>
           </div>
           <button className="connect-button-submit" type='submit'>Connect Me!</button>
         </form>
@@ -141,6 +149,7 @@ class ConnectForm extends React.Component {
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
           contentLabel='terms-and-conditions'
+          className='modal'
         >
           <h4 className='modal-header'>Terms and Conditions:</h4>
           <div className='modal-content'>
@@ -148,15 +157,15 @@ class ConnectForm extends React.Component {
           </div>
           <button className='close-button' onClick={this.closeModal}>CLOSE</button>
         </Modal>
-        <h5>Selected Profiles to be contacted:</h5>
-        {
-          this.props.profiles.map(profile => {
+        <h5 className='contact-form-header'>Selected Profiles:</h5>
+        <div className='list-talents'>
+          {this.props.profiles.map(profile => {
             if (profile.selected)
               return <TalentItem key={profile.salesforceId} profile={profile} />;
             else
               return;
-          })
-        }
+          })}
+        </div>
       </div>
     );
   }

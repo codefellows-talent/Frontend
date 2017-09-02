@@ -1,128 +1,33 @@
 @import "./_vars.scss";
 
-#the-talent{
-  position: absolute;
-  margin-top: 14%;
-  z-index: $above-background;
-  color: $color-white;
-  font-family: $font-title;
-  text-align: center;
-}
-.landing-hero-3{
-  margin-top: 10vh;
-  width: 100vw;
-  height: 48vh;
-  filter: brightness(.25);
-  position: relative;
-}
-
-div.list-talents{
-  display: inline-block;
-  margin-top: 12vh;
-  color: black;
-  width: 80%;
-  margin-left: 10%;
-  padding: 10px;
-}
-.connect-me-button{
-  color: $color-white;
-  background-color: $Buttons;
-  padding: $pad;
-  line-height: 40px;
-  border-radius: 30px;
-}
-#connect-div{
-  width: 10%;
-  background-color: $color-white;
-  float: right;
-  z-index: $above-background;
-  position: fixed;
-  text-align: center;
-}
-
-p{
-  color: $color-black;
-}
-button{
-  color: $color-white;
-  position: absolute;
-  left: 70vw;
-  width: 20%;
-  text-align: center;
-  background-color: $Buttons;
-  padding: $pad;
-  border-radius: 30px;
-  padding: 5px;
-
-}
-
-.add-button{
-  display: inline;
-  margin-left: -2%;
-}
-
-.remove-button{
-  display: inline;
-  margin-left: -2%;
-  background-color: $color-success;
-}
-
 .connect-button{
-  margin-left: -2%;
+  color: $color-white;
+  background-color: $Buttons;
+  padding: $pad;
+  border-radius: 30px;
 }
 
-
-@media only screen and (max-width: 500px) {
-  .list-talents{
-    margin-top: 20%;
-  }
-  #connect-div{
-    width: 5%;
-    background-color: $color-white;
-    float: right;
-    z-index: $above-background;
-    position: fixed;
-  }
-  .connect-me-button{
-    color: $color-white;
-    background-color: $Buttons;
-    padding: $pad;
-    line-height: 40px;
-    border-radius: 30px;
-  }
-  h1{
-    font-size: 2em;
-  }
-
-  #the-talent{
-    position: absolute;
-    margin-top: 35%;
-    z-index: $above-background;
-    color: $color-white;
-    font-family: $font-title;
-    text-align: center;
-  }
-  p{
-    font-size: .8em;
-  }
-  button{
-    color: $color-white;
-    position: absolute;
-    left: 70vw;
-    width: 20%;
-    text-align: center;
-    background-color: $Buttons;
-    padding: $pad;
-    border-radius: 30px;
-    padding: 5px;
-    font-size: .5em;
-    margin-top: 2%;
-  }
-}
-
-*{
-  font-family: arial;
-}
-body{
+.connect-container{
+  max-height: 100%;
+  width: 94%;
+  margin: 0 3%;
   background: $color-white;
+  z-index: $above-background;
+  padding: $pad;
+  padding-bottom: 1em;
+  position: sticky;
+  text-align: center;
+  border-bottom: 1px solid $color-lightgray;
+  top: 3.25em;
+  @media only screen and (min-width: 420px) {
+  top: 4.25em;
+  }
+  @media only screen and (min-width: 760px) {
+  top: 4.75em;
+  }
+  p {
+    margin-bottom: 1em;
+    color: $color-black;
+    font-size: 0.8em;
+  }
 }

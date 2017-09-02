@@ -1,5 +1,9 @@
 @import "./_vars.scss";
 
+*{
+  font-family: $font;
+}
+
 body {
   background: $color-white;
   position: relative;
